@@ -9,7 +9,7 @@
         /* 폰트 정의 (에이투지체-6SemiBold, CreatoDisplay-Regular & NanumSquareNeo) */
         @font-face {
             font-family: 'AtoZ-SemiBold';
-            src: url('./fonts/에이투지체-6SemiBold.woff2') format('woff2');
+            src: url('./fonts/AtoZ-6SemiBold.woff2') format('woff2');
             font-weight: 600;
             font-style: normal;
             unicode-range: U+0000-007F, U+00A0-024F, U+2000-206F;
@@ -3532,7 +3532,7 @@
     <header id="main-header" class="">
         <div class="header-container">
             <div class="logo" onclick="openTab(event, 'about')" title="Digital Curation Lab">
-                <img src="images/로고1.png" alt="Digital Curation Lab Logo" id="main-logo-img">
+                <img src="images/logo1.png" alt="Digital Curation Lab Logo" id="main-logo-img">
             </div>
 
             <nav class="main-nav" id="main-nav" style="margin-left: auto;">
@@ -3828,7 +3828,7 @@
 
                 <div class="about-us-wrapper">
                     <div class="about-us-left">
-                        <img src="images/로고2.png" alt="Digital Curation LAB Logo" class="about-us-logo">
+                        <img src="images/logo2.png" alt="Digital Curation LAB Logo" class="about-us-logo">
                     </div>
                     <div class="about-us-right">
                         <h1 class="about-us-title">DIGITAL CURATION LAB</h1>
@@ -3889,7 +3889,7 @@
                         <div>
                             <div class="contact-header-brand">
                                 <div class="contact-logo-box">
-                                    <img src="images/로고2.png" alt="Digital Curation LAB Logo">
+                                    <img src="images/logo2.png" alt="Digital Curation LAB Logo">
                                 </div>
                                 <div class="contact-brand-info">
                                     <h2 class="contact-lab-name">Digital Curation LAB</h2>
@@ -7365,10 +7365,10 @@
 
             if (!isHome || window.scrollY > 30 || isHeaderHovered) {
                 if (header) header.classList.add('scrolled');
-                if (logoImg) logoImg.src = 'images/로고1.png';
+                if (logoImg) logoImg.src = 'images/logo1.png';
             } else {
                 if (header) header.classList.remove('scrolled');
-                if (logoImg) logoImg.src = 'images/로고3.png';
+                if (logoImg) logoImg.src = 'images/logo3.png';
             }
         }
 

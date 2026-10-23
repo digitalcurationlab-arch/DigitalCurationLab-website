@@ -7128,6 +7128,24 @@
                     <div class="story-grid">
                         <div class="card story-card" onclick="showSeminarDetail(0)" style="cursor: pointer;">
                             <div>
+                                <div class="seminar-category">Reading Group</div>
+                                <h3 class="seminar-title lang-ko">Reading Group 1차</h3>
+                                <h3 class="seminar-title lang-en">Reading Group 1</h3>
+                                <p class="seminar-desc lang-ko">디지털 큐레이션 랩에서 진행한 1차 리딩 그룹 정리 내용</p>
+                                <p class="seminar-desc lang-en">Summary of the 1st Reading Group conducted by Digital
+                                    Curation Lab.</p>
+                                <div class="keyword-container" style="margin-bottom: 12px;">
+                                    <div class="tag-list">
+                                        <span class="tag-item">User Status</span>
+                                        <span class="tag-item">Human-AI Interaction</span>
+                                        <span class="tag-item">User Classification</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card story-card" onclick="showSeminarDetail(1)" style="cursor: pointer;">
+                            <div>
                                 <div class="seminar-category">Book Study</div>
                                 <h3 class="seminar-title lang-ko">커뮤니티 전략 바이블 : 커뮤니티 빌딩과 플랫폼 적용 가능성 탐색</h3>
                                 <h3 class="seminar-title lang-en">The Business of Belonging : Exploring Community
@@ -7151,7 +7169,9 @@
 
                 <div id="community-seminars-detail" style="display: none;">
                     <button class="back-btn" onclick="hideContentDetail('seminars')">← Back to Seminars</button>
-                    <div class="card" style="padding: 40px 45px;">
+                    <!-- Seminar Detail 1: Book Study -->
+                    <div id="seminar-detail-1" class="seminar-detail-content card"
+                        style="padding: 40px 45px; display: none;">
                         <!-- 회색선 위 섹션 -->
                         <div class="content-detail-header">
                             <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">Book
@@ -7982,6 +8002,764 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Seminar Detail 0: Reading Group 1 -->
+                    <div id="seminar-detail-0" class="seminar-detail-content card"
+                        style="padding: 40px 45px; display: none;">
+                        <!-- 회색선 위 섹션 -->
+                        <div class="content-detail-header">
+                            <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">Reading
+                                Group</div>
+                            <h3
+                                style="font-size: 26px; color: #0f172a; font-weight: 800; margin-bottom: 20px; line-height: 1.4;">
+                                <span class="lang-ko">Reading Group 1차</span>
+                                <span class="lang-en">Reading Group 1</span>
+                            </h3>
+
+                            <div
+                                style="display: flex; flex-direction: column; gap: 12px; background-color: #f8fafc; padding: 22px 25px; border-radius: 10px; border-left: 4px solid #265CD1;">
+                                <div style="font-size: 15px; color: #334155; line-height: 1.6;">
+                                    <strong style="color: #0f172a; display: inline-block; min-width: 90px;">
+                                        <span class="lang-ko">일시 :</span>
+                                        <span class="lang-en">Date :</span>
+                                    </strong>
+                                    <span class="lang-ko">2026.10.07. (수)</span>
+                                    <span class="lang-en">Wednesday, October 7, 2026</span>
+                                </div>
+                                <div style="font-size: 15px; color: #334155; line-height: 1.6;">
+                                    <strong style="color: #0f172a; display: inline-block; min-width: 90px;">
+                                        <span class="lang-ko">진행 방식 :</span>
+                                        <span class="lang-en">Format :</span>
+                                    </strong>
+                                    <span class="lang-ko">각 참석자가 순서대로 준비한 논문을 소개하고, 논문의 주요 내용과 연구방법에 대한 의견 및 본인 연구와의 연결
+                                        가능성을 논의함.</span>
+                                    <span class="lang-en">Each participant presented a paper they had selected, followed
+                                        by discussion of its main arguments, research methods, and potential connections
+                                        to their own research.</span>
+                                </div>
+                                <div style="font-size: 15px; color: #334155; line-height: 1.6; display: flex;">
+                                    <strong style="color: #0f172a; flex-shrink: 0; width: 90px;">
+                                        <span class="lang-ko">요약 :</span>
+                                        <span class="lang-en">Summary :</span>
+                                    </strong>
+                                    <span>
+                                        <span class="lang-ko">디지털 큐레이션 랩에서 진행한 1차 리딩 그룹 정리 내용입니다. 온라인 환경에서 행위자와 상호작용을
+                                            어떻게 측정하고 설명할 것인가를 핵심 문제로 삼아, 이용자 지위 역학, 생성형 에이전트(Generative Agents) 기반 상호작용
+                                            시뮬레이션, 댓글 트리 구조 기반 정량적 이용자 분석 등 3편의 논문을 심도 있게 검토하고 연구 방법론적 시사점을
+                                            도출하였습니다.</span>
+                                        <span class="lang-en">Summary of the 1st Reading Group conducted by Digital
+                                            Curation Lab. Centered on the core challenge of measuring and explaining
+                                            actors and interactions in online environments, the group reviewed three
+                                            papers covering user status dynamics, generative agent-based social
+                                            simulation, and comment-tree structural analysis.</span>
+                                    </span>
+                                </div>
+                                <div style="font-size: 15px; color: #334155; line-height: 1.6;">
+                                    <strong style="color: #0f172a; display: inline-block; min-width: 90px;">
+                                        <span class="lang-ko">키워드 :</span>
+                                        <span class="lang-en">Keywords :</span>
+                                    </strong>
+                                    <span style="color: #265CD1; font-weight: 700;">#User Status &nbsp; #Human-AI
+                                        Interaction &nbsp; #User Classification</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 구분 회색선 -->
+                        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 35px 0 30px 0;">
+
+                        <!-- 회색선 아래 섹션 -->
+                        <div class="seminar-discussion-section">
+                            <h4
+                                style="font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
+                                <span
+                                    style="display: inline-block; width: 4px; height: 22px; background-color: #265CD1; border-radius: 2px;"></span>
+                                <span class="lang-ko">논문별 상세 논의 (Papers &amp; Discussion)</span>
+                                <span class="lang-en">Papers &amp; Discussion</span>
+                            </h4>
+
+                            <!-- Paper 1 -->
+                            <div
+                                style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px 28px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                                <div
+                                    style="margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f1f5f9;">
+                                    <h5
+                                        style="font-size: 19px; font-weight: 700; color: #1e293b; margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                        <span
+                                            style="background-color: #eff6ff; color: #265CD1; font-size: 13px; font-weight: 800; padding: 3px 10px; border-radius: 20px; flex-shrink: 0;">PAPER
+                                            01</span>
+                                        <span>Unequal penalties: User status dynamics in the spread of social media
+                                            misinformation.</span>
+                                    </h5>
+                                    <p
+                                        style="font-size: 13.8px; color: #64748b; line-height: 1.6; margin: 0; padding-left: 2px;">
+                                        Bae, S. Y., &amp; DeFranza, D. (2026). Unequal penalties: User status dynamics
+                                        in the spread of social media misinformation. Journal of Computer-Mediated
+                                        Communication, 31(3), zmag005.
+                                    </p>
+                                </div>
+
+                                <!-- 1-1 -->
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
+                                        <span class="lang-ko">• 1-1. 소개 논문의 주제</span>
+                                        <span class="lang-en">• 1-1. Research Focus</span>
+                                    </div>
+                                    <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
+                                        class="lang-ko">
+                                        해당 논문은 <strong>온라인 커뮤니티에서 이용자의 지위(user status)에 따라 동일한 잘못에 대해 서로 다른 페널티를
+                                            받는지</strong>를 다루고 있는 커뮤니티 연구이다.
+                                    </p>
+                                    <p style="font-size: 15px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
+                                        class="lang-en">
+                                        This study examines whether users in online communities receive different
+                                        penalties for the same type of misconduct depending on their <strong>user
+                                            status</strong>.
+                                    </p>
+                                    <ul style="list-style-type: disc; padding-left: 20px; font-size: 14.1px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 6px;"
+                                        class="lang-ko">
+                                        <li>일반적인 직관에서는 지위가 높은 이용자가 권력을 더 많이 가지고 있기 때문에 동일한 잘못을 하더라도 상대적으로 덜 처벌받을 수 있다고
+                                            생각할 수 있음.</li>
+                                        <li>그러나 논문에서는 반대로, <strong>높은 지위 자체가 다른 이용자들에게 더 높은 기대와 규범적 기준을 형성하기 때문에 높은 지위의
+                                                이용자가 잘못을 했을 때 오히려 더 가혹한 반응을 받을 수 있다</strong>고 주장함.</li>
+                                        <li>따라서 이용자 지위와 페널티의 관계가 단순히 "높은 지위 → 적은 처벌"이라고 볼 수 있는지 검토하며, <strong>높은 지위가 보호
+                                                효과를 갖는지, 아니면 오히려 높은 규범적 기대를 발생시키는지</strong>를 실증적으로 살펴봄.</li>
+                                    </ul>
+                                    <ul style="list-style-type: disc; padding-left: 20px; font-size: 15px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 6px;"
+                                        class="lang-en">
+                                        <li>A common intuition is that high-status users possess greater power and may
+                                            therefore be punished less severely for the same misconduct.</li>
+                                        <li>In contrast, the paper argues that <strong>high status may create higher
+                                                expectations and normative standards among other users, potentially
+                                                leading to harsher responses when high-status users engage in
+                                                misconduct</strong>.</li>
+                                        <li>The study therefore examines whether the relationship between user status
+                                            and penalties can be summarized simply as "higher status → fewer penalties,"
+                                            investigating whether high status offers a protective effect or instead
+                                            imposes heightened normative expectations.</li>
+                                    </ul>
+                                </div>
+
+                                <!-- 1-2 -->
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-size: 15px; font-weight: 700; color: #29849C; margin-bottom: 8px;">
+                                        <span class="lang-ko">• 1-2. 주요 변수와 연구방법</span>
+                                        <span class="lang-en">• 1-2. Key Variables and Research Methods</span>
+                                    </div>
+                                    <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
+                                        class="lang-ko">
+                                        논문은 비교적 단순한 회귀분석을 활용하여 이용자 지위와 페널티의 관계를 분석한다.
+                                    </p>
+                                    <p style="font-size: 15px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
+                                        class="lang-en">
+                                        The paper analyzes the relationship between user status and penalties using
+                                        regression analysis.
+                                    </p>
+
+                                    <!-- Variables Grid -->
+                                    <div
+                                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-bottom: 14px;">
+                                        <div
+                                            style="background-color: #f8fafc; padding: 14px 16px; border-radius: 6px; border-left: 3px solid #0284c7;">
+                                            <strong style="color: #0f172a; display: block; margin-bottom: 4px;">
+                                                <span class="lang-ko">종속변수 1: 추천수 (Upvote score)</span>
+                                                <span class="lang-en">DV 1: Upvote score</span>
+                                            </strong>
+                                            <span style="font-size: 13.5px; color: #475569;" class="lang-ko">게시글이 다른
+                                                이용자들로부터 얼마나 지지를 받았는지를 나타내는 지표. 잘못된 게시글을 작성했을 때 추천수가 상대적으로 감소하는지를 통해 일종의
+                                                페널티를 측정함.</span>
+                                            <span style="font-size: 14px; color: #475569;" class="lang-en">An indicator
+                                                of community support. A penalty is measured by examining whether upvotes
+                                                decrease when a post contains misinformation.</span>
+                                        </div>
+                                        <div
+                                            style="background-color: #f8fafc; padding: 14px 16px; border-radius: 6px; border-left: 3px solid #265CD1;">
+                                            <strong style="color: #0f172a; display: block; margin-bottom: 4px;">
+                                                <span class="lang-ko">종속변수 2: Discursive divergence</span>
+                                                <span class="lang-en">DV 2: Discursive divergence</span>
+                                            </strong>
+                                            <span style="font-size: 13.5px; color: #475569;" class="lang-ko">게시글의 주장과
+                                                댓글의 내용이 얼마나 다른지를 계량화한 지표. 게시글 주장에 반하거나 불일치하는 댓글, 교정 댓글을 코사인 유사도(cosine
+                                                similarity)를 활용해 계량화함.</span>
+                                            <span style="font-size: 14px; color: #475569;" class="lang-en">A measure
+                                                quantifying how much comment content differs from the original post,
+                                                capturing opposition or corrective comments via cosine
+                                                similarity.</span>
+                                        </div>
+                                        <div
+                                            style="background-color: #f8fafc; padding: 14px 16px; border-radius: 6px; border-left: 3px solid #7c3aed;">
+                                            <strong style="color: #0f172a; display: block; margin-bottom: 4px;">
+                                                <span class="lang-ko">독립변수: 이용자 지위 (User Status)</span>
+                                                <span class="lang-en">IV: User Status</span>
+                                            </strong>
+                                            <span style="font-size: 13.5px; color: #475569;" class="lang-ko">커뮤니티의 누적
+                                                점수(Reddit karma 유사)를 이용자의 지위 지표로 활용. 중앙값(median)을 기준으로 높은 지위와 낮은 지위로
+                                                이분화함.</span>
+                                            <span style="font-size: 14px; color: #475569;" class="lang-en">Uses
+                                                cumulative community scores (similar to Reddit karma), split at the
+                                                median into high-status and low-status groups.</span>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        style="background-color: #f1f5f9; border-left: 4px solid #265CD1; padding: 12px 16px; border-radius: 6px; margin-top: 10px;">
+                                        <strong style="color: #0f172a; font-size: 14px;">
+                                            <span class="lang-ko">연구방법에 대한 평가 및 핵심 시사점 :</span>
+                                            <span class="lang-en">Methodological Assessment &amp; Core Insight :</span>
+                                        </strong>
+                                        <p style="font-size: 14px; color: #334155; margin-top: 4px; font-weight: 600;"
+                                            class="lang-ko">
+                                            "연구의 기여는 분석기법의 복잡성뿐 아니라 연구 아이디어의 명확성과 측정의 적절성에 의해 좌우될 수 있다." 복잡한 분석방법보다 명확한
+                                            연구 아이디어와 정밀한 측정이 학술적 기여를 이끌어냄을 보여줍니다.
+                                        </p>
+                                        <p style="font-size: 14.5px; color: #334155; margin-top: 4px; font-weight: 600;"
+                                            class="lang-en">
+                                            "A strong research idea can support a meaningful study even when the
+                                            analysis relies on a relatively basic regression model." The paper
+                                            underscores that idea clarity and sound measurement strategy outweigh sheer
+                                            mathematical complexity.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 1-3 -->
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
+                                        <span class="lang-ko">• 1-3. 논문에서 흥미롭게 본 방법론적 요소: 코사인 유사도의 역발상</span>
+                                        <span class="lang-en">• 1-3. Methodological Element of Interest: Novel
+                                            Application of Cosine Similarity</span>
+                                    </div>
+                                    <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify;"
+                                        class="lang-ko">
+                                        일반적으로 코사인 유사도(cosine similarity)는 텍스트 간 유사성을 측정하는 데 사용되지만, 이 논문에서는 이를 반대로 활용하여
+                                        <strong>두 텍스트의 내용이 얼마나 상이하고 발산하는지(content divergence)</strong>를 측정하는 데 활용했다는 점이
+                                        주목할 만하다. 즉, <em>텍스트 간 유사성 측정 → 내용적 불일치/발산의 정도 측정</em>으로 확장한 창의적 방법론을 제시했다.
+                                    </p>
+                                    <p style="font-size: 15px; color: #334155; line-height: 1.75; text-align: justify;"
+                                        class="lang-en">
+                                        Cosine similarity is typically used to measure textual similarity. In this
+                                        study, however, it is inverted to quantify <strong>how different the contents of
+                                            two texts are</strong>. Extending from <em>measuring textual similarity →
+                                            measuring the degree of content disagreement or divergence</em> represents a
+                                        compelling methodological insight.
+                                    </p>
+                                </div>
+
+                                <!-- 1-4 -->
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700; color: #29849C; margin-bottom: 8px;">
+                                        <span class="lang-ko">• 1-4. 연구에 대한 전반적인 평가</span>
+                                        <span class="lang-en">• 1-4. Overall Assessment of the Study</span>
+                                    </div>
+                                    <ul style="list-style-type: disc; padding-left: 20px; font-size: 14.1px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 6px;"
+                                        class="lang-ko">
+                                        <li>연구 질문이 매우 직관적이고 명확함.</li>
+                                        <li>복잡한 이론이나 과도한 분석기법에 의존하기보다, 명확한 아이디어를 중심으로 추천수와 댓글 발산이라는 적절한 종속변수를 설계함.</li>
+                                        <li>분석방법 자체의 난도보다 <strong>연구 아이디어와 좋은 측정 지표를 만드는 것의 중요성</strong>을 잘 보여주는 모범적인 연구
+                                            사례임.</li>
+                                    </ul>
+                                    <ul style="list-style-type: disc; padding-left: 20px; font-size: 15px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 6px;"
+                                        class="lang-en">
+                                        <li>The research question is intuitive and clearly articulated.</li>
+                                        <li>The study is grounded in a well-defined conceptual framework rather than
+                                            relying on convoluted models.</li>
+                                        <li>Illustrates the vital importance of developing a strong research idea and
+                                            appropriate operational measures over pure analytical complexity.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Paper 2 -->
+                            <div
+                                style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px 28px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                                <div
+                                    style="margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f1f5f9;">
+                                    <h5
+                                        style="font-size: 19px; font-weight: 700; color: #1e293b; margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                        <span
+                                            style="background-color: #eff6ff; color: #265CD1; font-size: 13px; font-weight: 800; padding: 3px 10px; border-radius: 20px; flex-shrink: 0;">PAPER
+                                            02</span>
+                                        <span>Generative agents: Interactive simulacra of human behavior.</span>
+                                    </h5>
+                                    <p
+                                        style="font-size: 13.8px; color: #64748b; line-height: 1.6; margin: 0; padding-left: 2px;">
+                                        Park et al. (2023). Generative agents: Interactive simulacra of human behavior.
+                                        In
+                                        Proceedings of the 36th Annual ACM Symposium on User Interface Software and
+                                        Technology.
+                                    </p>
+                                </div>
+
+                                <!-- 2-1 -->
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
+                                        <span class="lang-ko">• 2-1. 소개 논문의 성격 및 Smallville 가상 환경</span>
+                                        <span class="lang-en">• 2-1. Nature of the Study &amp; The Smallville
+                                            Environment</span>
+                                    </div>
+                                    <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
+                                        class="lang-ko">
+                                        커뮤니케이션 분야의 실증논문이라기보다 <strong>방법론 및 시뮬레이션 연구</strong>로서, 온라인 커뮤니티의 대화 역학, 사회적
+                                        상호작용(social interaction), 사회 시스템(social systems)을 연구하는 데 생성형 에이전트 기반 시뮬레이션을 활용할
+                                        가능성을 모색한 연구이다.
+                                    </p>
+                                    <p style="font-size: 15px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
+                                        class="lang-en">
+                                        A <strong>methodological and simulation study</strong> exploring the potential
+                                        of generative-agent-based simulations to model conversational dynamics, social
+                                        interaction, and social systems in online environments.
+                                    </p>
+                                    <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify;"
+                                        class="lang-ko">
+                                        게임 <em>The Sims</em>와 유사한 가상 환경인 <strong>'Smallville'</strong>을 구축하여 집, 카페, 학교 등
+                                        가상 공간과 객체를 배치하였다. 에이전트들은 특정 장소 이동, 객체 관찰/사용, 타 에이전트와의 대화, 경험 기억 및 미래 행동 결정을
+                                        자율적으로 수행한다. 즉, 단순 질의응답 챗봇을 넘어 <strong>시간의 흐름 속에서 지속적으로 행동하는 사회적 행위자(social
+                                            actor)</strong>를 성공적으로 구현하였다.
+                                    </p>
+                                    <p style="font-size: 15px; color: #334155; line-height: 1.75; text-align: justify;"
+                                        class="lang-en">
+                                        The paper constructs <strong>Smallville</strong>, a sandbox environment
+                                        resembling <em>The Sims</em> populated with houses, cafés, and schools. Agents
+                                        navigate locations, use objects, converse, retain memories, and plan future
+                                        actions, functioning as <strong>social actors acting continuously over
+                                            time</strong> rather than isolated query-response chatbots.
+                                    </p>
+                                </div>
+
+                                <!-- 2-2 Core Structure -->
+                                <div style="margin-bottom: 20px;">
+                                    <div
+                                        style="font-size: 15px; font-weight: 700; color: #29849C; margin-bottom: 10px;">
+                                        <span class="lang-ko">• 2-2. Generative Agent의 핵심 3대 구조</span>
+                                        <span class="lang-en">• 2-2. Core Components of Generative Agents</span>
+                                    </div>
+
+                                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                                        <div
+                                            style="background-color: #f8fafc; padding: 14px 18px; border-radius: 8px; border-left: 3px solid #0284c7;">
+                                            <strong style="color: #0f172a; font-size: 15px;">
+                                                <span class="lang-ko">① Memory (기억 스트림과 검색)</span>
+                                                <span class="lang-en">1. Memory (Memory Stream &amp; Retrieval)</span>
+                                            </strong>
+                                            <p style="font-size: 13.8px; color: #334155; line-height: 1.65; margin-top: 4px;"
+                                                class="lang-ko">
+                                                에이전트의 모든 경험을 <strong>memory stream</strong>에 자연어 기록, 생성 시점, 최종 참조 시점과 함께
+                                                저장한다. 기억 검색 시 <strong>Recency(최신성)</strong>,
+                                                <strong>Importance(중요도)</strong>, <strong>Relevance(임베딩 코사인 유사도 기반
+                                                    관련성)</strong> 3가지 척도를 종합하여 현재 상황에 최적화된 기억을 인출한다.
+                                            </p>
+                                            <p style="font-size: 14.5px; color: #334155; line-height: 1.65; margin-top: 4px;"
+                                                class="lang-en">
+                                                Records experiences in a <strong>memory stream</strong>. Retrieval
+                                                balances <strong>Recency</strong> (how recently accessed),
+                                                <strong>Importance</strong> (poignancy score), and
+                                                <strong>Relevance</strong> (semantic similarity via embeddings and
+                                                cosine distance).
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            style="background-color: #f8fafc; padding: 14px 18px; border-radius: 8px; border-left: 3px solid #265CD1;">
+                                            <strong style="color: #0f172a; font-size: 15px;">
+                                                <span class="lang-ko">② Reflection (성찰 및 고차원 인식 형성)</span>
+                                                <span class="lang-en">2. Reflection (Higher-Level Synthesis)</span>
+                                            </strong>
+                                            <p style="font-size: 13.8px; color: #334155; line-height: 1.65; margin-top: 4px;"
+                                                class="lang-ko">
+                                                개별 기억을 있는 그대로 소비하는 데 그치지 않고, 중요 기억이 축적되면 <em>"이 사람은 어떤 주제에 관심이
+                                                    있는가?"</em>와 같은 상위 수준의 질문을 자율 생성하고 답을 도출한다. 이를 통해 타 에이전트의 관심사, 성향,
+                                                관계에 대한 추상적이고 심층적인 인식을 형성한다.
+                                            </p>
+                                            <p style="font-size: 14.5px; color: #334155; line-height: 1.65; margin-top: 4px;"
+                                                class="lang-en">
+                                                Synthesizes accumulated memories into higher-level inferences (e.g.,
+                                                "What are this person's interests?"), establishing nuanced mental models
+                                                of others' dispositions, preferences, and relationships.
+                                            </p>
+                                        </div>
+
+                                        <div
+                                            style="background-color: #f8fafc; padding: 14px 18px; border-radius: 8px; border-left: 3px solid #7c3aed;">
+                                            <strong style="color: #0f172a; font-size: 15px;">
+                                                <span class="lang-ko">③ Planning / Action (행동 계획 및 실행)</span>
+                                                <span class="lang-en">3. Planning / Action (Coherent Long-term
+                                                    Behavior)</span>
+                                            </strong>
+                                            <p style="font-size: 13.8px; color: #334155; line-height: 1.65; margin-top: 4px;"
+                                                class="lang-ko">
+                                                눈앞의 상황에 단순 반사적으로 반응하는 대신, 기억과 성찰을 기반으로 일과 계획 및 행동 순서를 구성한다. 이를 통해 시간의 흐름
+                                                속에서도 행동의 일관성과 장기적 맥락을 유지하여 인간과 매우 유사한 사회적 행태를 만들어낸다.
+                                            </p>
+                                            <p style="font-size: 14.5px; color: #334155; line-height: 1.65; margin-top: 4px;"
+                                                class="lang-en">
+                                                Translates reflections and memories into structured daily schedules and
+                                                contingency plans, ensuring temporal consistency and realistic,
+                                                human-like goal pursuit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2-3 -->
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
+                                        <span class="lang-ko">• 2-3. 중요성 검증, 상호작용 양상 및 한계점</span>
+                                        <span class="lang-en">• 2-3. Ablation Validation, Social Dynamics &amp;
+                                            Limitations</span>
+                                    </div>
+                                    <ul style="list-style-type: disc; padding-left: 20px; font-size: 14.1px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 8px;"
+                                        class="lang-ko">
+                                        <li><strong>기능 검증 (Ablation Study):</strong> 각 요소를 제한/제거한 시스템과 비교한 결과, 기억·성찰·계획의
+                                            삼박자가 유기적으로 결합할 때 비로소 일관되고 복합적인 사회적 행동이 창발됨을 입증함.</li>
+                                        <li><strong>상호작용 창발 (Emergence):</strong> 에이전트 간 <em>정보 확산(Information
+                                                diffusion)</em>, <em>관계 형성(Relationship formation)</em>, <em>공동 과제
+                                                조율(Coordination, 예: 발렌타인데이 파티 기획)</em>이 자생적으로 발생함.</li>
+                                        <li><strong>한계점:</strong> 자신의 기억에 대해 확신하지 못하거나, 언급되지 않은 사실을 환각(hallucination)하는
+                                            등 정보 정확성과 신뢰성 측면의 한계가 여전히 잔존함.</li>
+                                    </ul>
+                                    <ul style="list-style-type: disc; padding-left: 20px; font-size: 15px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 8px;"
+                                        class="lang-en">
+                                        <li><strong>Ablation Evaluation:</strong> Comparative tests omitting components
+                                            demonstrated that the synergy between memory, reflection, and planning is
+                                            indispensable for generating coherent social behaviors.</li>
+                                        <li><strong>Emergent Social Dynamics:</strong> Organic emergence of
+                                            <em>information diffusion</em>, <em>relationship formation</em> across 25
+                                            agents, and <em>joint coordination</em> (e.g., hosting a Valentine's Day
+                                            party).
+                                        </li>
+                                        <li><strong>Limitations:</strong> Lingering challenges with hallucination,
+                                            memory retrieval inaccuracies, and ungrounded embellishments.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Paper 3 -->
+                            <div
+                                style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px 28px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                                <div
+                                    style="margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid #f1f5f9;">
+                                    <h5
+                                        style="font-size: 19px; font-weight: 700; color: #1e293b; margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                        <span
+                                            style="background-color: #eff6ff; color: #265CD1; font-size: 13px; font-weight: 800; padding: 3px 10px; border-radius: 20px; flex-shrink: 0;">PAPER
+                                            03</span>
+                                        <span class="lang-ko">온라인 토론의 댓글 응답 구조를 이용한 사용자 특성 분석</span>
+                                        <span class="lang-en">User Characteristic Analysis Using Comment-Response
+                                            Structures
+                                            in Online Discussions</span>
+                                    </h5>
+                                    <p
+                                        style="font-size: 13.8px; color: #64748b; line-height: 1.6; margin: 0; padding-left: 2px;">
+                                        <span class="lang-ko">김성환, 탁해성, 조환규. (2018). 온라인 토론의 댓글 응답 구조를 이용한 사용자 특성 분석.
+                                            한국콘텐츠학회논문지, 18(11), 135-145.</span>
+                                        <span class="lang-en">Kim, S. H., Tak, H. S., &amp; Cho, H. G. (2018). User
+                                            Characteristic Analysis Using Comment-Response Structures in Online
+                                            Discussions. Journal of the Korea Contents Association, 18(11),
+                                            135-145.</span>
+                                    </p>
+                                </div>
+
+                                <!-- 3-1 -->
+                                <div style="margin-bottom: 20px;">
+                                    <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
+                                        <span class="lang-ko">• 3-1. 소개 논문의 성격 및 데이터 환경</span>
+                                        <span class="lang-en">• 3-1. Nature of the Study &amp; Data Context</span>
+                                    </div>
+                                    <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 8px;"
+                                        class="lang-ko">
+                                        온라인 커뮤니티의 게시글-댓글 관계를 <strong>트리 구조(tree structure)</strong>로 모델링하고 이를 정량적 지표로
+                                        변환하는 방법론적 연구이다. 익명 커뮤니티에서는 이용자의 인구학적 속성을 파악하기 어렵기 때문에, <em>"게시글과 댓글에서 관찰할 수 있는
+                                            구조적 행동을 정량화하여 이용자의 특성을 식별할 수 있는가?"</em>라는 핵심 문제의식을 다룬다. 장시간 깊은 토론이 유지되는 특정
+                                        온라인 커뮤니티의 3개년 누적 데이터를 기반으로 분석을 수행하였다.
+                                    </p>
+                                    <p style="font-size: 15px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 8px;"
+                                        class="lang-en">
+                                        A methodological study modeling post-comment hierarchies as <strong>tree
+                                            structures</strong> to extract quantitative features. Addressing the
+                                        challenge of anonymous platforms where demographic data are absent, it asks:
+                                        <em>"Can user characteristics be inferred by quantifying structural behaviors
+                                            observable in discussion trees?"</em> It examines three years of discussion
+                                        data from an online community characterized by deep threaded discourse.
+                                    </p>
+                                </div>
+
+                                <!-- 3-2 Comparison -->
+                                <div style="margin-bottom: 20px;">
+                                    <div
+                                        style="font-size: 15px; font-weight: 700; color: #29849C; margin-bottom: 10px;">
+                                        <span class="lang-ko">• 3-2. 게시글 작성자 vs 댓글 작성자의 구조적 지표 비교</span>
+                                        <span class="lang-en">• 3-2. Structural Metric Comparison: Post vs.
+                                            Comment Authors</span>
+                                    </div>
+
+                                    <div
+                                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+                                        <div
+                                            style="background-color: #f8fafc; padding: 16px 18px; border-radius: 8px; border-top: 3px solid #2563eb;">
+                                            <strong
+                                                style="color: #0f172a; font-size: 15px; display: block; margin-bottom: 6px;">
+                                                <span class="lang-ko">게시글 작성자 (Post Author) 지표</span>
+                                                <span class="lang-en">Post Author Metrics</span>
+                                            </strong>
+                                            <ul style="list-style-type: disc; padding-left: 18px; font-size: 13.5px; color: #475569; line-height: 1.6; display: flex; flex-direction: column; gap: 4px;"
+                                                class="lang-ko">
+                                                <li><strong>Depth (논의의 깊이):</strong> 게시글 → 댓글 → 대댓글로 이어지는 논의의 깊이 측정.
+                                                </li>
+                                                <li><strong>Width (논의의 분화/확산):</strong> 하나의 글 아래 얼마나 다양한 하위 논의가 병렬로
+                                                    분화되었는가.</li>
+                                                <li><strong>핵심 성격:</strong> 작성자 본인의 행동보다 <em>게시글에 대한 타인의 반응과 논의 구조</em>
+                                                    중심.</li>
+                                            </ul>
+                                            <ul style="list-style-type: disc; padding-left: 18px; font-size: 14px; color: #475569; line-height: 1.6; display: flex; flex-direction: column; gap: 4px;"
+                                                class="lang-en">
+                                                <li><strong>Depth:</strong> How deeply replies cascade from the initial
+                                                    post.</li>
+                                                <li><strong>Width:</strong> How broadly sub-discussions branch
+                                                    horizontally.</li>
+                                                <li><strong>Core Nature:</strong> Captures <em>how others react to the
+                                                        post</em> rather than direct author actions.</li>
+                                            </ul>
+                                        </div>
+
+                                        <div
+                                            style="background-color: #f8fafc; padding: 16px 18px; border-radius: 8px; border-top: 3px solid #7c3aed;">
+                                            <strong
+                                                style="color: #0f172a; font-size: 15px; display: block; margin-bottom: 6px;">
+                                                <span class="lang-ko">댓글 작성자 (Comment Author) 지표</span>
+                                                <span class="lang-en">Comment Author Metrics</span>
+                                            </strong>
+                                            <ul style="list-style-type: disc; padding-left: 18px; font-size: 13.5px; color: #475569; line-height: 1.6; display: flex; flex-direction: column; gap: 4px;"
+                                                class="lang-ko">
+                                                <li><strong>부모 댓글의 서로 다른 사용자 수:</strong> 얼마나 다양한 이용자의 글에 반응했는가 (상호작용
+                                                    다양성).</li>
+                                                <li><strong>자식 댓글의 서로 다른 사용자 수:</strong> 자신의 댓글이 얼마나 다양한 후속 반응을 이끌어냈는가.
+                                                </li>
+                                                <li><strong>댓글 간 최대 거리:</strong> 한 논의 경로에서 얼마나 지속적으로 참여했는가.</li>
+                                                <li><strong>핵심 성격:</strong> 이용자가 <em>직접 수행한 상호작용 행동</em> 중심.</li>
+                                            </ul>
+                                            <ul style="list-style-type: disc; padding-left: 18px; font-size: 14px; color: #475569; line-height: 1.6; display: flex; flex-direction: column; gap: 4px;"
+                                                class="lang-en">
+                                                <li><strong>Parent Distinct Users:</strong> Diversity of interaction
+                                                    partners responded to.</li>
+                                                <li><strong>Child Distinct Users:</strong> Generative capacity to
+                                                    trigger diverse replies.</li>
+                                                <li><strong>Max Distance:</strong> Persistence within a given
+                                                    conversational thread.</li>
+                                                <li><strong>Core Nature:</strong> Captures <em>direct interactive
+                                                        practices</em> of the user.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3-3 -->
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
+                                        <span class="lang-ko">• 3-3. 머신러닝 분류 및 연구설계에 대한 비판적 고찰</span>
+                                        <span class="lang-en">• 3-3 Machine Learning Classification &amp;
+                                            Critical Research Design Critique</span>
+                                    </div>
+                                    <ul style="list-style-type: disc; padding-left: 20px; font-size: 14.1px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 8px;"
+                                        class="lang-ko">
+                                        <li><strong>분류 성능:</strong> 차단(blocking) 이력 이용자 분류 시, 단순 랜덤 이용자보다 <em>활동적인
+                                                이용자(active users)</em>를 비교군으로 설정했을 때 제안된 트리 지표의 판별력이 유의미하게 향상됨 (단순 활동량과
+                                            구조적 패턴의 분리).</li>
+                                        <li><strong>연구설계 비판 (개념적 불일치):</strong> 서론에서는 '온라인 분쟁(conflict) 사전 예측'을 연구목적으로
+                                            표방했으나, 실제 분석에서는 '차단(blocking)'을 종속변수로 설정함. 그러나 <strong>차단과 분쟁은 엄연히 다른
+                                                개념</strong>이며(분쟁이 발생해도 차단되지 않을 수 있음), 서론의 연구문제와 후반부 실증 분석 간의 논리적 연결성이
+                                            취약하다는 날카로운 비판이 제기됨.</li>
+                                        <li><strong>후속 연구 제언:</strong> 비록 연구설계의 논리적 결합에는 한계가 있으나, 전반부에서 제시된 <strong>트리
+                                                기반 구조적 지표화 기법 자체</strong>는 향후 온라인 커뮤니티 상호작용 연구에서 매우 유용한 방법론적 자산으로 평가됨.
+                                        </li>
+                                    </ul>
+                                    <ul style="list-style-type: disc; padding-left: 20px; font-size: 15px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 8px;"
+                                        class="lang-en">
+                                        <li><strong>Classification Insights:</strong> In detecting blocked users,
+                                            discriminative accuracy improved significantly when comparing against
+                                            <em>active unblocked users</em> rather than random users, successfully
+                                            separating volume of activity from topological features.
+                                        </li>
+                                        <li><strong>Critical Design Flaw:</strong> While the introduction framed the
+                                            goal around predicting <em>online conflict</em>, the empirical modeling
+                                            targeted <em>user blocking</em>. <strong>Conflict and blocking are distinct
+                                                constructs</strong>; conflict does not necessarily lead to sanctions.
+                                            Introducing unaligned outcomes weakens theoretical cohesion.</li>
+                                        <li><strong>Methodological Takeaway:</strong> Despite this design mismatch, the
+                                            tree-based topological metrics (depth, width, partner diversity) remain
+                                            highly valuable for computational communication research.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Section 4: Summary Table -->
+                            <div
+                                style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 25px 28px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                                <h5
+                                    style="font-size: 19px; font-weight: 700; color: #1e293b; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #f1f5f9; display: flex; align-items: center; gap: 8px;">
+                                    <span
+                                        style="background-color: #eff6ff; color: #265CD1; font-size: 13px; font-weight: 800; padding: 3px 10px; border-radius: 20px;">SUMMARY</span>
+                                    <span class="lang-ko">세 논문 핵심 비교 정리</span>
+                                    <span class="lang-en">Summary of the Three Papers</span>
+                                </h5>
+
+                                <div class="rt-table-wrapper" style="margin: 10px 0;">
+                                    <table class="rt-data-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="width: 18%;">
+                                                    <span class="lang-ko">구분</span>
+                                                    <span class="lang-en">Category</span>
+                                                </th>
+                                                <th style="width: 27%;">
+                                                    <span class="lang-ko">논문 1 (User Status)</span>
+                                                    <span class="lang-en">Paper 1 (User Status)</span>
+                                                </th>
+                                                <th style="width: 27%;">
+                                                    <span class="lang-ko">논문 2 (Generative Agents)</span>
+                                                    <span class="lang-en">Paper 2 (Generative Agents)</span>
+                                                </th>
+                                                <th style="width: 28%;">
+                                                    <span class="lang-ko">논문 3 (Tree Structure)</span>
+                                                    <span class="lang-en">Paper 3 (Tree Structure)</span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><strong><span class="lang-ko">주요 관심</span><span
+                                                            class="lang-en">Primary
+                                                            focus</span></strong></td>
+                                                <td><span class="lang-ko">이용자 지위와 커뮤니티 반응</span><span
+                                                        class="lang-en">User
+                                                        status and community responses</span></td>
+                                                <td><span class="lang-ko">생성형 에이전트와 사회적 상호작용</span><span
+                                                        class="lang-en">Generative agents and social interaction</span>
+                                                </td>
+                                                <td><span class="lang-ko">댓글 트리 구조와 이용자 행동</span><span
+                                                        class="lang-en">Comment-tree structures and user behavior</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong><span class="lang-ko">연구 성격</span><span
+                                                            class="lang-en">Research
+                                                            type</span></strong></td>
+                                                <td><span class="lang-ko">커뮤니티 실증연구</span><span
+                                                        class="lang-en">Empirical
+                                                        study of online communities</span>
+                                                </td>
+                                                <td><span class="lang-ko">시뮬레이션 / 방법론 연구</span><span
+                                                        class="lang-en">Simulation / methodological study</span></td>
+                                                <td><span class="lang-ko">커뮤니티 데이터 방법론 연구</span><span
+                                                        class="lang-en">Methodological study of community data</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong><span class="lang-ko">핵심 단위</span><span class="lang-en">Unit
+                                                            of analysis</span></strong></td>
+                                                <td><span class="lang-ko">이용자 지위와 게시글</span><span class="lang-en">User
+                                                        status and posts</span></td>
+                                                <td><span class="lang-ko">Generative Agent</span><span
+                                                        class="lang-en">Generative agents</span></td>
+                                                <td><span class="lang-ko">게시글 · 댓글 · 이용자</span><span
+                                                        class="lang-en">Posts,
+                                                        comments, and users</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong><span class="lang-ko">주요 개념</span><span class="lang-en">Key
+                                                            concepts</span></strong></td>
+                                                <td><span class="lang-ko">지위, 페널티, 추천, Discursive divergence</span><span
+                                                        class="lang-en">Status, penalties, upvotes, discursive
+                                                        divergence</span></td>
+                                                <td><span class="lang-ko">Memory, Reflection,
+                                                        Planning/Action</span><span class="lang-en">Memory, Reflection,
+                                                        Planning/Action</span></td>
+                                                <td><span class="lang-ko">Depth, Width, 상호작용 구조</span><span
+                                                        class="lang-en">Depth, Width, interaction structure</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong><span class="lang-ko">주요 방법</span><span class="lang-en">Main
+                                                            methods</span></strong></td>
+                                                <td><span class="lang-ko">회귀분석 (Regression)</span><span
+                                                        class="lang-en">Regression analysis</span></td>
+                                                <td><span class="lang-ko">Generative Agent / 시뮬레이션 /
+                                                        Ablation</span><span class="lang-en">Generative agents,
+                                                        simulation, ablation</span></td>
+                                                <td><span class="lang-ko">트리 기반 Feature extraction 및 분류</span><span
+                                                        class="lang-en">Tree-based feature extraction &amp;
+                                                        classification</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong><span class="lang-ko">상호작용 관점</span><span
+                                                            class="lang-en">Interaction view</span></strong></td>
+                                                <td><span class="lang-ko">게시글에 대한 타 이용자의 반응</span><span
+                                                        class="lang-en">Other users' responses to posts</span></td>
+                                                <td><span class="lang-ko">에이전트 간 정보 확산 · 관계 · 조율</span><span
+                                                        class="lang-en">Diffusion, relationships, coordination</span>
+                                                </td>
+                                                <td><span class="lang-ko">댓글 · 대댓글의 구조적 관계</span><span
+                                                        class="lang-en">Structural relations between
+                                                        comments/replies</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong><span class="lang-ko">방법론적 초점</span><span
+                                                            class="lang-en">Methodological interest</span></strong></td>
+                                                <td><span class="lang-ko">댓글 내용 차이의 코사인 유사도 수치화</span><span
+                                                        class="lang-en">Quantifying comment divergence via cosine
+                                                        distance</span></td>
+                                                <td><span class="lang-ko">사회적 행동을 생성하는 에이전트 아키텍처</span><span
+                                                        class="lang-en">Architecture for generating human-like
+                                                        behavior</span></td>
+                                                <td><span class="lang-ko">온라인 상호작용의 위상학적 구조 지표화</span><span
+                                                        class="lang-en">Quantifying structural topological
+                                                        features</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Section 5: Key Takeaways -->
+                            <div
+                                style="background-color: #f1f5f9; border-left: 5px solid #265CD1; border-radius: 8px; padding: 25px 30px; margin-top: 30px;">
+                                <h5 style="font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 12px;">
+                                    <span class="lang-ko">이번 리딩그룹의 핵심 정리 (Key Takeaways)</span>
+                                    <span class="lang-en">Key Takeaways from Reading Group 1</span>
+                                </h5>
+                                <p style="font-size: 14.1px; color: #334155; line-height: 1.8; text-align: justify; margin-bottom: 10px;"
+                                    class="lang-ko">
+                                    이번 1차 리딩그룹에서 다룬 세 연구는 각기 다른 분석 방법론과 이론적 틀을 취하고 있으나, 본질적으로 <strong>"온라인 환경에서 행위자와
+                                        상호작용을 어떻게 측정하고 설명할 것인가"</strong>라는 공통된 학술적 문제의식으로 귀결됩니다.
+                                </p>
+                                <p style="font-size: 15px; color: #334155; line-height: 1.8; text-align: justify; margin-bottom: 10px;"
+                                    class="lang-en">
+                                    Although the three studies explore diverse theoretical lenses and analytical
+                                    toolkits, they converge on a foundational challenge: <strong>how to measure, model,
+                                        and explain actors and interactions within digital ecosystems</strong>.
+                                </p>
+                                <ul style="list-style-type: disc; padding-left: 20px; font-size: 14.1px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 8px;"
+                                    class="lang-ko">
+                                    <li><strong>지위 역학의 재조명:</strong> 이용자의 사회적 지위가 타인의 규범적 기대와 상호작용 페널티에 미치는 영향을 확인하며,
+                                        명확한 측정 지표 설계의 중요성을 도출함.</li>
+                                    <li><strong>시뮬레이션 기반 소셜 컴퓨팅:</strong> 기억-성찰-계획 체계를 갖춘 생성형 에이전트를 통해 온라인 커뮤니티의 복합적
+                                        상호작용을 컴퓨터 시뮬레이션으로 재현할 가능성을 타진함.</li>
+                                    <li><strong>구조적 행동의 지표화:</strong> 게시글-댓글 트리에서 깊이(depth), 너비(width), 파트너 다양성 등 위상학적
+                                        특성을 수치화하여 익명 환경에서도 이용자 행동을 정밀 진단하는 기법을 확보함.</li>
+                                </ul>
+                                <ul style="list-style-type: disc; padding-left: 20px; font-size: 15px; color: #334155; line-height: 1.75; display: flex; flex-direction: column; gap: 8px;"
+                                    class="lang-en">
+                                    <li><strong>Status Dynamics:</strong> Investigated how social standing triggers
+                                        normative expectations and sanction divergence, highlighting the primacy of
+                                        clear measurement strategies.</li>
+                                    <li><strong>Agent-Based Social Simulation:</strong> Showcased the potential of
+                                        generative architectures (memory-reflection-planning) to model emergent social
+                                        systems computationally.</li>
+                                    <li><strong>Topological Profiling:</strong> Demonstrated how structural tree metrics
+                                        (depth, width, partner diversity) enable robust behavioral profiling even within
+                                        anonymous discussion environments.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -8744,8 +9522,12 @@
             }
         }
 
-        // ─── COMMUNITY 상세 정보 데이터 및 제어 ───
         const seminarDataList = [
+            {
+                category: 'Reading Group',
+                title_ko: 'Reading Group 1차',
+                title_en: 'Reading Group 1'
+            },
             {
                 category: 'Book Study',
                 title_ko: '커뮤니티 전략 바이블 : 커뮤니티 빌딩과 플랫폼 적용 가능성 탐색',
@@ -8856,6 +9638,44 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
         ];
 
         const eventDataList = [
+            {
+                title_ko: '디지털 큐레이션 랩, 제1차 리딩그룹 진행',
+                title_en: 'Digital Curation Lab Conducts Its First Reading Group Session',
+                body_ko: '지난 10월 7일, 디지털 큐레이션 랩 연구원들이 모여 제1차 리딩그룹을 진행하였다. 이번 리딩그룹은 향후 정기적으로 운영될 리딩그룹의 파일럿 세션으로, 연구원들이 각자 선정한 논문을 소개하고 주요 내용을 공유하며, 논문을 통해 얻은 인사이트와 연구적 시사점에 대해 논의하는 방식으로 진행되었다. ',
+                body_en: 'On October 7, researchers from the Digital Curation Lab held the First Reading Group Session, a pilot session for a regular reading group to be organized by the lab. During the session, each researcher introduced a paper of their choice, presenting its key findings and sharing insights and research implications drawn from the paper. ',
+                img: 'images/events_3_1.png',
+                images: [
+                    'images/events_3_1.png',
+                    'images/events_3_2.png'
+                ],
+                body_html_ko: `<div style="line-height: 1.85; word-break: keep-all; overflow-wrap: break-word; color: #334155; font-size: 15.5px; max-width: 850px; margin: 0 auto;">
+    <div style="margin: 25px 0; text-align: center;">
+        <img src="images/events_3_1.png" alt="Reading Group Event 1" style="width: 100%; max-width: 850px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: inline-block;">
+    </div>
+
+    <p style="margin-bottom: 20px;">지난 10월 7일, 디지털 큐레이션 랩 연구원들이 모여 제1차 리딩그룹을 진행하였다. 이번 리딩그룹은 향후 정기적으로 운영될 리딩그룹의 파일럿 세션으로, 연구원들이 각자 선정한 논문을 소개하고 주요 내용을 공유하며, 논문을 통해 얻은 인사이트와 연구적 시사점에 대해 논의하는 방식으로 진행되었다. 이를 통해 연구원들은 다양한 연구 주제와 관점을 접하고, 서로의 연구에 대한 의견을 교환하며 각자의 연구 관심과 관점을 확장하였다. 앞으로 리딩그룹은 디지털 큐레이션 랩에서 2주에 한 번씩 정기적으로 진행될 예정이다. 각 리딩그룹의 주요 내용은 홈페이지의 COMMUNITY 메뉴 내 SEMINARS 탭을 통해 지속적으로 공유할 예정이다.</p>
+
+    <div style="margin: 25px 0; text-align: center;">
+        <img src="images/events_3_2.png" alt="Reading Group Event 2" style="width: 100%; max-width: 850px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: inline-block;">
+    </div>
+
+    <p style="margin-bottom: 20px;">제1차 리딩그룹 이후에는 참여 연구원들이 함께 점심 식사를 하며 교류하는 시간을 가졌다. 연구 관련 주제뿐만 아니라 연구원으로서의 경험과 개인적인 관심사 등 다양한 주제에 대해 의견을 나누었다. 이러한 교류는 공식적인 학술 논의를 넘어 연구원 간 상호 이해를 높이고, 연구실 구성원 간의 유대와 협력적 관계를 형성하는 계기가 되었다.</p>
+
+</div>`,
+                body_html_en: `<div style="line-height: 1.85; word-break: keep-all; overflow-wrap: break-word; color: #334155; font-size: 15.5px; max-width: 850px; margin: 0 auto;">
+    <div style="margin: 25px 0; text-align: center;">
+        <img src="images/events_3_1.png" alt="Reading Group Event 1" style="width: 100%; max-width: 850px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: inline-block;">
+    </div>
+
+    <p style="margin-bottom: 20px;">On October 7, researchers from the Digital Curation Lab held the First Reading Group Session, a pilot session for a regular reading group to be organized by the lab. During the session, each researcher introduced a paper of their choice, presenting its key findings and sharing insights and research implications drawn from the paper. The discussion enabled researchers to engage with diverse research topics and perspectives, exchange feedback on one another’s work, and broaden their own research interests and perspectives. The reading group is scheduled to meet every two weeks at the Digital Curation Lab. Summaries of each session will be regularly published under the SEMINARS tab in the COMMUNITY section of the lab’s website.</p>
+
+    <div style="margin: 25px 0; text-align: center;">
+        <img src="images/events_3_2.png" alt="Reading Group Event 2" style="width: 100%; max-width: 850px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: inline-block;">
+    </div>
+
+    <p style="margin-bottom: 20px;">Following the first session, the participating researchers gathered for lunch, extending their exchanges beyond the formal reading group. In addition to research-related topics, they discussed their experiences as researchers and a range of personal interests. These informal exchanges complemented the academic discussions by fostering mutual understanding and strengthening collegial relationships among lab members, contributing to a collaborative research environment.</p>
+</div>`
+            },
             {
                 title_ko: '「AI와 큐레이션」 수업 Yash Raj Shrestha 교수 초청 특강 및 교류',
                 title_en: 'Guest Lecture and Academic Exchange with Professor Yash Raj Shrestha for the 「AI and Curation」Course',
@@ -10314,8 +11134,18 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
 
         function showSeminarDetail(idx, skipHistory = false) {
             activeSeminarIdx = idx;
-            document.getElementById('community-seminars-main').style.display = 'none';
-            document.getElementById('community-seminars-detail').style.display = 'block';
+            const mainView = document.getElementById('community-seminars-main');
+            const detailView = document.getElementById('community-seminars-detail');
+            if (mainView && detailView) {
+                mainView.style.display = 'none';
+                detailView.style.display = 'block';
+            }
+
+            const details = document.querySelectorAll('.seminar-detail-content');
+            details.forEach((el) => {
+                el.style.display = (el.id === 'seminar-detail-' + idx) ? 'block' : 'none';
+            });
+
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
             if (!skipHistory) {
@@ -10324,7 +11154,12 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
         }
 
         function renderSeminarDetailData(data) {
-            // Detailed content is rendered statically inside #community-seminars-detail
+            if (activeSeminarIdx !== null) {
+                const details = document.querySelectorAll('.seminar-detail-content');
+                details.forEach((el) => {
+                    el.style.display = (el.id === 'seminar-detail-' + activeSeminarIdx) ? 'block' : 'none';
+                });
+            }
         }
 
         let currentNoticeFile = '';
@@ -10550,7 +11385,11 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
         }
 
         function hideContentDetail(type, skipHistory = false) {
-            if (type === 'seminars') activeSeminarIdx = null;
+            if (type === 'seminars') {
+                activeSeminarIdx = null;
+                const details = document.querySelectorAll('.seminar-detail-content');
+                details.forEach(el => { el.style.display = 'none'; });
+            }
             if (type === 'news') activeNoticeIdx = null;
             if (type === 'events') activeEventIdx = null;
             if (type === 'researchtrend') {

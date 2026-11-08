@@ -1662,15 +1662,104 @@
             margin-bottom: 40px;
         }
 
+        #tech-sw .sw-layout {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 30px;
+            align-items: flex-start;
+            margin-top: 24px;
+            min-height: 320px;
+        }
+
+        #tech-sw .sw-update-panel {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 26px 24px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+            min-height: 227.4px;
+            max-height: 227.4px;
+            height: 227.4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        #tech-sw .sw-update-header {
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            flex-shrink: 0;
+        }
+
+        #tech-sw .sw-update-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            overflow-y: auto;
+            min-height: 0;
+            flex: 1;
+            padding-right: 4px;
+        }
+
+        #tech-sw .sw-update-item {
+            padding: 0;
+            border-bottom: none;
+            min-height: 0;
+            overflow: visible;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        #tech-sw .sw-update-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        #tech-sw .sw-update-date {
+            display: inline-block;
+            width: 72px;
+            flex-shrink: 0;
+            font-size: 11px;
+            font-weight: 700;
+            color: #265CD1;
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        #tech-sw .sw-update-item p {
+            margin: 0;
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: #475569;
+            flex: 1;
+        }
+
         @media (max-width: 768px) {
             .sw-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #tech-sw .sw-layout {
                 grid-template-columns: 1fr;
             }
         }
 
         .sw-card {
             background: white;
-            padding: 30px;
+            padding: 16px 20px 14px;
             border: 1px solid #e2e8f0;
             display: flex;
             flex-direction: column;
@@ -1680,6 +1769,8 @@
             min-width: 0;
             word-break: break-word;
             overflow-wrap: break-word;
+            min-height: 0;
+            height: auto;
         }
 
         .sw-card:hover {
@@ -1691,14 +1782,14 @@
             font-size: 16px;
             font-weight: 700;
             color: #265CD1;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
 
         .sw-title {
             font-size: 20px;
             font-weight: 700;
             color: #0f172a;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             line-height: 1.4;
         }
 
@@ -1719,7 +1810,7 @@
             font-size: 15px;
             color: #475569;
             line-height: 1.7;
-            margin-bottom: 25px;
+            margin-bottom: 12px;
             flex: 1;
         }
 
@@ -1728,7 +1819,7 @@
             justify-content: space-between;
             align-items: flex-end;
             border-top: 1px solid #f1f5f9;
-            padding-top: 15px;
+            padding-top: 12px;
             gap: 15px;
         }
 
@@ -2195,7 +2286,16 @@
         }
 
         #community-seminars .story-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: stretch;
+            column-gap: 20px;
+            row-gap: 30px;
+        }
+
+        #community-seminars .story-grid > .research-trend-grid {
+            grid-column: auto;
+            width: 100%;
+            min-width: 0;
         }
 
         @media (max-width: 992px) {
@@ -2223,6 +2323,8 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            height: 100%;
+            align-self: stretch;
         }
 
         .story-card:hover {
@@ -2332,9 +2434,16 @@
 
         .research-trend-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px 30px;
-            margin-bottom: 50px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px 30px;
+            margin-bottom: 0;
+            align-items: start;
+            width: 100%;
+            min-width: 0;
+        }
+
+        .research-trend-grid.single-item {
+            grid-template-columns: 1fr;
         }
 
         @media (max-width: 768px) {
@@ -2348,6 +2457,11 @@
             flex-direction: column;
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            min-width: 0;
+            align-self: stretch;
+            height: 100%;
+            box-sizing: border-box;
         }
 
         .rt-card:hover {
@@ -2889,6 +3003,11 @@
             color: #0f172a;
             margin-bottom: 8px;
             line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .seminar-title.lang-ko {
@@ -2901,6 +3020,11 @@
             color: #475569;
             line-height: 1.55;
             margin-bottom: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .seminar-meta {
@@ -4331,7 +4455,6 @@
                         <button onclick="openTab(event, 'community-news')">NEWS</button>
                         <button onclick="openTab(event, 'community-events')">EVENTS</button>
                         <button onclick="openTab(event, 'community-seminars')">SEMINARS</button>
-                        <button onclick="openTab(event, 'community-researchtrend')">RESEARCH TREND</button>
                     </div>
                 </div>
 
@@ -5310,7 +5433,7 @@
                             <h1 class="banner-title">SW</h1>
                         </div>
                     </div>
-                    <div class="sw-grid">
+                    <div class="sw-layout">
                         <div class="sw-card">
                             <div>
                                 <div
@@ -5320,8 +5443,8 @@
                                         style="font-size: 14px; font-weight: 600; color: #265CD1; cursor: pointer; text-decoration: none;"
                                         title="Information Detail">Information →</a>
                                 </div>
-                                <h3 class="sw-title lang-ko">네트워크 통합 분석기 (베타)</h3>
-                                <h3 class="sw-title lang-en">Network Integrated Analyzer (Beta)</h3>
+                                <h3 class="sw-title lang-ko">네트워크 통합 분석기 0.0.12</h3>
+                                <h3 class="sw-title lang-en">Network Integrated Analyzer 0.0.12</h3>
                                 <div class="sw-desc lang-ko"
                                     style="margin-bottom: 15px; line-height: 1.6; color: #475569;">
                                     네트워크 분석에 필요한 중심성 계산기, 하위집단 분석, CONCOR 분석, QAP 분석을 시행할 수 있는 분석기입니다.
@@ -5348,6 +5471,50 @@
                                 </a>
                             </div>
                         </div>
+
+                        <aside class="sw-update-panel">
+                            <div class="sw-update-header">
+                                <span class="lang-ko">업데이트 사항</span>
+                                <span class="lang-en">Updates</span>
+                            </div>
+                            <ul class="sw-update-list">
+                                <li class="sw-update-item">
+                                    <span class="sw-update-date">2026.10.12</span>
+                                    <p>
+                                        <span class="lang-ko">v0.0.8 매트릭스 변환 기능이 추가되었고, 카카오톡 오픈채팅 변환 도구가 포함되었습니다.</span>
+                                        <span class="lang-en">v0.0.8 adds matrix conversion and a KakaoTalk open-chat conversion tool.</span>
+                                    </p>
+                                </li>
+                                <li class="sw-update-item">
+                                    <span class="sw-update-date">2026.10.17</span>
+                                    <p>
+                                        <span class="lang-ko">v0.0.9에서 네트워크 시각화 메뉴가 추가되었습니다.</span>
+                                        <span class="lang-en">v0.0.9 adds the network visualization menu.</span>
+                                    </p>
+                                </li>
+                                <li class="sw-update-item">
+                                    <span class="sw-update-date">2026.10.21</span>
+                                    <p>
+                                        <span class="lang-ko">v0.0.10에서 레이아웃과 버그가 수정되었습니다.</span>
+                                        <span class="lang-en">v0.0.10 fixes layout and bugs.</span>
+                                    </p>
+                                </li>
+                                <li class="sw-update-item">
+                                    <span class="sw-update-date">2026.10.26</span>
+                                    <p>
+                                        <span class="lang-ko">v0.0.11에서 레이아웃과 버그 수정이 이어졌습니다.</span>
+                                        <span class="lang-en">v0.0.11 continues layout and bug fixes.</span>
+                                    </p>
+                                </li>
+                                <li class="sw-update-item">
+                                    <span class="sw-update-date">2026.11.02</span>
+                                    <p>
+                                        <span class="lang-ko">v0.0.12에서는 중심성 분석이 R sna 엔진 하나로 통일되었습니다.</span>
+                                        <span class="lang-en">v0.0.12 unifies centrality analysis into a single R sna engine.</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </aside>
                     </div>
                 </div>
 
@@ -7125,59 +7292,97 @@
                             <h1 class="banner-title">SEMINARS</h1>
                         </div>
                     </div>
-                    <div class="story-grid">
-                        <div class="card story-card" onclick="showSeminarDetail(2)" style="cursor: pointer;">
-                            <div>
-                                <div class="seminar-category">Reading Group</div>
-                                <h3 class="seminar-title lang-ko">Reading Group 2차</h3>
-                                <h3 class="seminar-title lang-en">Reading Group 2</h3>
-                                <p class="seminar-desc lang-ko">디지털 큐레이션 랩에서 진행한 2차 리딩 그룹 정리 내용</p>
-                                <p class="seminar-desc lang-en">Summary of the 2nd Reading Group conducted by Digital
-                                    Curation Lab.</p>
-                                <div class="keyword-container" style="margin-bottom: 12px;">
-                                    <div class="tag-list">
-                                        <span class="tag-item">SAOM</span>
-                                        <span class="tag-item">Attention Dynamics</span>
-                                        <span class="tag-item">Political Influencer</span>
-                                    </div>
+                    <div class="research-trend-merged-section" style="margin-top: 24px;">
+                        <div class="research-trend-header" style="margin-bottom: 20px;">
+                            <div class="research-trend-filter-wrapper" id="rt-filter-wrapper">
+                                <button class="research-trend-filter-btn" id="rt-filter-btn" type="button"
+                                    onclick="toggleResearchTrendFilterMenu(event)">
+                                    <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;">
+                                        <line y1="1.5" x2="18" y2="1.5" stroke="currentColor" stroke-width="2.5" />
+                                        <line x1="2.5" y1="7" x2="15.5" y2="7" stroke="currentColor" stroke-width="2.5" />
+                                        <line x1="5.5" y1="12.5" x2="12.5" y2="12.5" stroke="currentColor"
+                                            stroke-width="2.5" />
+                                    </svg>
+                                    <span id="rt-filter-label">Filter</span>
+                                </button>
+                                <div class="research-trend-filter-dropdown" id="rt-filter-dropdown">
+                                    <div class="rt-filter-option" onclick="filterResearchTrend('Total')">Total</div>
+                                    <div class="rt-filter-option" onclick="filterResearchTrend('Reading Group')">Reading Group</div>
+                                    <div class="rt-filter-option" onclick="filterResearchTrend('Research Trend')">Research Trend</div>
+                                    <div class="rt-filter-option" onclick="filterResearchTrend('Book Study')">Book Study</div>
+                                    <div class="rt-filter-option" onclick="filterResearchTrend('Other')">Other</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card story-card" onclick="showSeminarDetail(0)" style="cursor: pointer;">
-                            <div>
-                                <div class="seminar-category">Reading Group</div>
-                                <h3 class="seminar-title lang-ko">Reading Group 1차</h3>
-                                <h3 class="seminar-title lang-en">Reading Group 1</h3>
-                                <p class="seminar-desc lang-ko">디지털 큐레이션 랩에서 진행한 1차 리딩 그룹 정리 내용</p>
-                                <p class="seminar-desc lang-en">Summary of the 1st Reading Group conducted by Digital
-                                    Curation Lab.</p>
-                                <div class="keyword-container" style="margin-bottom: 12px;">
-                                    <div class="tag-list">
-                                        <span class="tag-item">User Status</span>
-                                        <span class="tag-item">Human-AI Interaction</span>
-                                        <span class="tag-item">User Classification</span>
+                        <div class="story-grid">
+                            <div class="card story-card" data-seminar-category="Reading Group" onclick="showSeminarDetail(2)" style="cursor: pointer;">
+                                <div>
+                                    <div class="seminar-category">Reading Group</div>
+                                    <h3 class="seminar-title lang-ko">Reading Group: 네트워크 행위자의 참여와 영향력</h3>
+                                    <h3 class="seminar-title lang-en">Reading Group: Participation and Influence of Network
+                                        Actors</h3>
+                                    <p class="seminar-desc lang-ko">온라인 환경에서 행위자, 참여, 영향력의 설명과 모형화를 중심으로, 청소년 흡연 또래 네트워크 개입
+                                        시뮬레이션, 조직 소셜 플랫폼의 주의 역학, 정치 인플루언서의 다차원적 개념화에 관한 세 편의 최신 연구를 검토하고 방법론적 시사점을 논의하였다.
+                                    </p>
+                                    <p class="seminar-desc lang-en">Reviewing three recent studies on peer-network
+                                        intervention simulations, attention dynamics in enterprise social platforms, and the
+                                        multidimensional conceptualization of political influencers to explore approaches to
+                                        modeling actors, participation, and influence in digital environments.</p>
+                                    <div class="keyword-container" style="margin-bottom: 12px;">
+                                        <div class="tag-list">
+                                            <span class="tag-item">SAOM</span>
+                                            <span class="tag-item">Attention Dynamics</span>
+                                            <span class="tag-item">Political Influencer</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card story-card" onclick="showSeminarDetail(1)" style="cursor: pointer;">
-                            <div>
-                                <div class="seminar-category">Book Study</div>
-                                <h3 class="seminar-title lang-ko">커뮤니티 전략 바이블 : 커뮤니티 빌딩과 플랫폼 적용 가능성 탐색</h3>
-                                <h3 class="seminar-title lang-en">The Business of Belonging : Exploring Community
-                                    Building &amp; Platform Application</h3>
-                                <p class="seminar-desc lang-ko">초연결 사회로 진입함에 따라 강조되고 있는 '커뮤니티' 를 이해하고, 핵심적인 커뮤니티 빌딩 전략을
-                                    온라인 플랫폼 환경에 접목하여 실천적 커뮤니케이션 연구 방향을 탐색한다.</p>
-                                <p class="seminar-desc lang-en">Understanding 'community' emphasized in a
-                                    hyper-connected society and exploring practical communication research directions by
-                                    applying core community building strategies to online platform environments.</p>
-                                <div class="keyword-container" style="margin-bottom: 12px;">
-                                    <div class="tag-list">
-                                        <span class="tag-item">Community</span>
-                                        <span class="tag-item">Social Identity</span>
-                                        <span class="tag-item">Interaction</span>
+                            <div class="card story-card" data-seminar-category="Reading Group" onclick="showSeminarDetail(0)" style="cursor: pointer;">
+                                <div>
+                                    <div class="seminar-category">Reading Group</div>
+                                    <h3 class="seminar-title lang-ko">Reading Group: 온라인 상호작용의 구조와 행위자 </h3>
+                                    <h3 class="seminar-title lang-en">Reading Group: The Structure of Online Interactions
+                                        and Actors</h3>
+                                    <p class="seminar-desc lang-ko">온라인 환경에서 행위자와 상호작용을 측정하고 설명하는 방법을 중심으로, 이용자 지위 역학, 생성형
+                                        에이전트 기반 시뮬레이션, 댓글 트리 구조 분석에 관한 세 편의 논문을 검토하고 방법론적 시사점을 논의하였다.</p>
+                                    <p class="seminar-desc lang-en">Examining three studies on user status dynamics,
+                                        generative agent-based simulations, and comment-tree structural analysis to explore
+                                        methodological approaches to measuring and explaining actors and interactions in
+                                        online environments.</p>
+                                    <div class="keyword-container" style="margin-bottom: 12px;">
+                                        <div class="tag-list">
+                                            <span class="tag-item">User Status</span>
+                                            <span class="tag-item">Human-AI Interaction</span>
+                                            <span class="tag-item">User Classification</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="research-trend-grid" id="rt-cards-grid" style="margin-top: 0; margin-bottom: 0; width: 100%;">
+                                <!-- Rendered by JS -->
+                            </div>
+
+                            <div class="card story-card" data-seminar-category="Book Study" onclick="showSeminarDetail(1)" style="cursor: pointer;">
+                                <div>
+                                    <div class="seminar-category">Book Study</div>
+                                    <h3 class="seminar-title lang-ko">커뮤니티 전략 바이블 : 커뮤니티 빌딩과 플랫폼 적용 가능성 탐색</h3>
+                                    <h3 class="seminar-title lang-en">The Business of Belonging : Exploring Community
+                                        Building &amp; Platform Application</h3>
+                                    <p class="seminar-desc lang-ko">초연결 사회로 진입함에 따라 강조되고 있는 '커뮤니티' 를 이해하고, 핵심적인 커뮤니티 빌딩 전략을
+                                        온라인 플랫폼 환경에 접목하여 실천적 커뮤니케이션 연구 방향을 탐색한다.</p>
+                                    <p class="seminar-desc lang-en">Understanding 'community' emphasized in a
+                                        hyper-connected society and exploring practical communication research directions by
+                                        applying core community building strategies to online platform environments.</p>
+                                    <div class="keyword-container" style="margin-bottom: 12px;">
+                                        <div class="tag-list">
+                                            <span class="tag-item">Community</span>
+                                            <span class="tag-item">Social Identity</span>
+                                            <span class="tag-item">Interaction</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -7187,6 +7392,23 @@
 
                 <div id="community-seminars-detail" style="display: none;">
                     <button class="back-btn" onclick="hideContentDetail('seminars')">← Back to Seminars</button>
+
+                    <div id="community-researchtrend-detail" class="card"
+                        style="padding: 40px 45px; display: none; margin-bottom: 30px;">
+                        <div class="content-detail-header">
+                            <div id="rt-detail-badge" class="rt-detail-badge">SAOM (Stochastic Actor-Oriented Models)</div>
+                            <h3 id="rt-detail-title"
+                                style="font-size: 28px; color: #0f172a; font-weight: 800; margin-bottom: 20px; line-height: 1.4;">
+                                Dynamic Modeling of Personalized News Curation and Shared Issue Networks
+                            </h3>
+                            <div id="rt-detail-subtitle-box"
+                                style="display: flex; flex-direction: column; gap: 12px; background-color: #f8fafc; padding: 22px 25px; border-radius: 10px; border-left: 4px solid #265CD1;">
+                            </div>
+                        </div>
+                        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 35px 0 30px 0;">
+                        <div id="rt-detail-body" class="seminar-discussion-section"></div>
+                    </div>
+
                     <!-- Seminar Detail 1: Book Study -->
                     <div id="seminar-detail-1" class="seminar-detail-content card"
                         style="padding: 40px 45px; display: none;">
@@ -8030,8 +8252,9 @@
                                 Group</div>
                             <h3
                                 style="font-size: 26px; color: #0f172a; font-weight: 800; margin-bottom: 20px; line-height: 1.4;">
-                                <span class="lang-ko">Reading Group 1차</span>
-                                <span class="lang-en">Reading Group 1</span>
+                                <span class="lang-ko">Reading Group: 온라인 상호작용의 구조와 행위자</span>
+                                <span class="lang-en">Reading Group: The Structure of Online Interactions and
+                                    Actors</span>
                             </h3>
 
                             <div
@@ -8050,12 +8273,11 @@
                                         <span class="lang-en">Summary :</span>
                                     </strong>
                                     <span>
-                                        <span class="lang-ko">디지털 큐레이션 랩에서 진행한 1차 리딩 그룹 정리 내용입니다. 온라인 환경에서 행위자와 상호작용을
+                                        <span class="lang-ko">온라인 환경에서 행위자와 상호작용을
                                             어떻게 측정하고 설명할 것인가를 핵심 문제로 삼아, 이용자 지위 역학, 생성형 에이전트(Generative Agents) 기반 상호작용
                                             시뮬레이션, 댓글 트리 구조 기반 정량적 이용자 분석 등 3편의 논문을 심도 있게 검토하고 연구 방법론적 시사점을
                                             도출하였습니다.</span>
-                                        <span class="lang-en">Summary of the 1st Reading Group conducted by Digital
-                                            Curation Lab. Centered on the core challenge of measuring and explaining
+                                        <span class="lang-en">Centered on the core challenge of measuring and explaining
                                             actors and interactions in online environments, the group reviewed three
                                             papers covering user status dynamics, generative agent-based social
                                             simulation, and comment-tree structural analysis.</span>
@@ -8729,12 +8951,12 @@
                             <div
                                 style="background-color: #f1f5f9; border-left: 5px solid #265CD1; border-radius: 8px; padding: 25px 30px; margin-top: 30px;">
                                 <h5 style="font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 12px;">
-                                    <span class="lang-ko">이번 리딩그룹의 핵심 정리 (Key Takeaways)</span>
-                                    <span class="lang-en">Key Takeaways from Reading Group 1</span>
+                                    <span class="lang-ko">핵심 정리</span>
+                                    <span class="lang-en">Key Takeaways</span>
                                 </h5>
                                 <p style="font-size: 14.1px; color: #334155; line-height: 1.8; text-align: justify; margin-bottom: 10px;"
                                     class="lang-ko">
-                                    이번 1차 리딩그룹에서 다룬 세 연구는 각기 다른 분석 방법론과 이론적 틀을 취하고 있으나, 본질적으로 <strong>"온라인 환경에서 행위자와
+                                    이번 리딩그룹에서 다룬 세 연구는 각기 다른 분석 방법론과 이론적 틀을 취하고 있으나, 본질적으로 <strong>"온라인 환경에서 행위자와
                                         상호작용을 어떻게 측정하고 설명할 것인가"</strong>라는 공통된 학술적 문제의식으로 귀결됩니다.
                                 </p>
                                 <p style="font-size: 15px; color: #334155; line-height: 1.8; text-align: justify; margin-bottom: 10px;"
@@ -8776,8 +8998,9 @@
                                 Group</div>
                             <h3
                                 style="font-size: 26px; color: #0f172a; font-weight: 800; margin-bottom: 20px; line-height: 1.4;">
-                                <span class="lang-ko">Reading Group 2차</span>
-                                <span class="lang-en">Reading Group 2</span>
+                                <span class="lang-ko">Reading Group: 네트워크 행위자의 참여와 영향력</span>
+                                <span class="lang-en">Reading Group: Participation and Influence of Network
+                                    Actors</span>
                             </h3>
 
                             <div
@@ -8796,17 +9019,17 @@
                                         <span class="lang-en">Summary :</span>
                                     </strong>
                                     <span>
-                                        <span class="lang-ko">디지털 큐레이션 랩에서 진행한 2차 리딩 그룹 정리 내용입니다. 온라인 환경에서 행위자(actors),
+                                        <span class="lang-ko">온라인 환경에서 행위자(actors),
                                             참여(participation), 영향력(influence)을 어떻게 설명하고 연구할 것인가를 핵심 문제로 삼아, 확률적 행위자 기반
                                             모형(SAOM)을 활용한 청소년 흡연 또래 네트워크 개입 시뮬레이션, 조직 소셜 기술 플랫폼에서의 주의 역학(Attention
-                                            Dynamics)과 이분 관계 사건 모형(BREM), 정치 인플루언서(Political Influencers)의 다차원적 개념화 등
+                                            Dynamics)과 이분 관계 사건 모형(bipartite REM), 정치 인플루언서(Political Influencers)의 다차원적 개념화 등
                                             3편의 최신 연구를 심도 있게 검토하고 연구 방법론적 시사점을 도출하였습니다.</span>
-                                        <span class="lang-en">Summary of the 2nd Reading Group conducted by Digital
-                                            Curation Lab. Centered on how to explain and model actors, participation,
+                                        <span class="lang-en">Centered on how to explain and model actors,
+                                            participation,
                                             and influence in digital ecosystems, the group reviewed three recent studies
                                             covering Stochastic Actor-Oriented Models (SAOM) for network intervention
                                             simulation, attention dynamics on enterprise social technology platforms via
-                                            bipartite relational event models (BREM), and the conceptual
+                                            bipartite relational event models (bipartite REM), and the conceptual
                                             reconceptualization and multidimensional attributes of political
                                             influencers.</span>
                                     </span>
@@ -8859,8 +9082,8 @@
                                 <!-- 1-1 -->
                                 <div style="margin-bottom: 20px;">
                                     <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
-                                        <span class="lang-ko">• 1-1. 논문 선정 이유 및 연구 질문</span>
-                                        <span class="lang-en">• 1-1. Research Motivation &amp; Core Questions</span>
+                                        <span class="lang-ko">• 1-1. 논문 주제 및 선정 이유</span>
+                                        <span class="lang-en">• 1-1. Research Topic &amp; Selection Rationale</span>
                                     </div>
                                     <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
                                         class="lang-ko">
@@ -9127,11 +9350,11 @@
                                 <div style="margin-bottom: 20px;">
                                     <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
                                         <span class="lang-ko">• 2-1. 논문 주제 및 선정 이유</span>
-                                        <span class="lang-en">• 2-1. Research Topic &amp; Motivation</span>
+                                        <span class="lang-en">• 2-1. Research Topic &amp; Selection Rationale</span>
                                     </div>
                                     <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
                                         class="lang-ko">
-                                        유럽의 한 대형 항공기업에서 사내 소셜 기술 플랫폼(Microsoft Yammer/Viva Engage 유사 형태)을 도입해 생성된
+                                        유럽의 한 대형 항공기업에서 사내 소셜 기술 플랫폼(Viva Engage; 구 Yammer)을 도입해 생성된
                                         3,346명의 조직 구성원과 56,502건의 타임스탬프 커뮤니케이션 사건 로그를 분석한 연구이다.
                                     </p>
                                     <p style="font-size: 15px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
@@ -9163,19 +9386,19 @@
                                 <!-- 2-2 -->
                                 <div style="margin-bottom: 20px;">
                                     <div style="font-size: 15px; font-weight: 700; color: #29849C; margin-bottom: 8px;">
-                                        <span class="lang-ko">• 2-2. 분석 단위 및 모형: 이분 관계 사건 모형(BREM)과 5대 주의 메커니즘</span>
+                                        <span class="lang-ko">• 2-2. 분석 단위 및 모형: 이분 관계 사건 모형(bipartite REM)과 주의 메커니즘</span>
                                         <span class="lang-en">• 2-2. Analytical Architecture: Bipartite Relational Event
                                             Models &amp; Attention Mechanisms</span>
                                     </div>
                                     <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
                                         class="lang-ko">
                                         연구는 노동자 노드와 메시지 스레드 노드로 구성된 <strong>이분 관계 사건 모형(bipartite relational event
-                                            model, BREM)</strong>을 사용하였다. 개인의 총 활동량만 집계하는 정적 분석을 넘어, <em>"특정 시점에 어떤 이용자가
+                                            model, bipartite REM)</strong>을 사용하였다. 개인의 총 활동량만 집계하는 정적 분석을 넘어, <em>"특정 시점에 어떤 이용자가
                                             어떤 스레드에 참여(게시글 작성·답글·좋아요)하는가"</em>를 위험비(hazard ratio)로 정밀하게 추정한다.
                                     </p>
                                     <p style="font-size: 15px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
                                         class="lang-en">
-                                        The study estimates <strong>bipartite relational event models (BREM)</strong>
+                                        The study estimates <strong>bipartite relational event models (bipartite REM)</strong>
                                         connecting workers and message threads, modeling the instantaneous hazard of a
                                         worker engaging with a specific thread at time <em>t</em> rather than relying on
                                         aggregated static summaries.
@@ -9251,27 +9474,7 @@
                                         </div>
                                     </div>
 
-                                    <div
-                                        style="background-color: #f1f5f9; border-left: 4px solid #265CD1; padding: 12px 16px; border-radius: 6px; margin-top: 10px;">
-                                        <strong style="color: #0f172a; font-size: 14px;">
-                                            <span class="lang-ko">통제변수 및 플랫폼 설계 요인의 발견 :</span>
-                                            <span class="lang-en">Control Variables &amp; Platform Design Affordances
-                                                :</span>
-                                        </strong>
-                                        <p style="font-size: 14px; color: #334155; margin-top: 4px;" class="lang-ko">
-                                            <strong>질문형 시작 메시지:</strong> 질문으로 시작하는 스레드는 비질문형 스레드 대비 후속 참여 유치 가능성이 24~35%
-                                            낮게 나타남(답변이 달리면 문제가 해결·종결된 것으로 인식되어 추가 입력이 불필요해짐). 반면 <strong>첫 메시지 글자
-                                                수:</strong> 길이가 긴 메시지로 시작된 스레드는 복합적 논의 가치가 있는 주제로 인식되어 추가 참여가 11~23%
-                                            유의미하게 증가함.
-                                        </p>
-                                        <p style="font-size: 14.5px; color: #334155; margin-top: 4px;" class="lang-en">
-                                            <strong>Question Initiation:</strong> Threads starting with a question are
-                                            24% to 35% less likely to attract continued attention as responses signal
-                                            issue resolution. Conversely, <strong>Initial Message Length:</strong>
-                                            Longer initial posts signal discussion-worthy complexity, increasing
-                                            attention hazard by 11% to 23%.
-                                        </p>
-                                    </div>
+                                    
                                 </div>
 
                                 <!-- 2-3 -->
@@ -9313,7 +9516,7 @@
                                         class="lang-ko">
                                         <li>주의 혼합의 가설(H4: 활발한 이용자일수록 덜 주목받는 스레드에 참여할 것이다)과 달리 추정된 위험비가 0.9817로 나타난 점에 대해
                                             집중적인 토론이 진행됨.</li>
-                                        <li>모형에서 주의 혼합이 독립적 메커니즘이 아니라 **'누적 주의(개인 활동량) × 스레드의 주의 강화(스레드 인기도)'**의 상호작용항으로
+                                        <li>모형에서 주의 혼합이 독립적 메커니즘이 아니라 <strong>'누적 주의(개인 활동량) × 스레드의 주의 강화(스레드 인기도)'</strong>의 상호작용항으로
                                             조작화되었음을 확인하고, 계수의 단순 부호만으로 가설 기각 여부를 단정하기보다 상호작용 항의 통계적 역학과 변수 척도화를 함께 검토해야
                                             한다는 방법론적 교훈을 공유함.</li>
                                         <li>이론적 개념을 플랫폼 로그의 관찰 가능한 지표로 조작화(operationalization)할 때 발생하는 간극을 꼼꼼히 점검하고 재현해야
@@ -9325,7 +9528,7 @@
                                             was 0.9817, slightly below 1, contrary to the positive exploratory
                                             hypothesis (H4).</li>
                                         <li>The group identified that Attention Mixing was operationalized as an
-                                            interaction term (cumulative activity × thread popularity); thus, evaluating
+                                            interaction term <strong>(cumulative activity × thread popularity)</strong>; thus, evaluating
                                             hypothesis directions requires examining interaction mechanics rather than
                                             coefficient signs alone.</li>
                                         <li>Underscored the critical importance of aligning theoretical constructs with
@@ -9359,7 +9562,7 @@
                                 <div style="margin-bottom: 20px;">
                                     <div style="font-size: 15px; font-weight: 700; color: #265CD1; margin-bottom: 8px;">
                                         <span class="lang-ko">• 3-1. 논문 주제 및 선정 이유</span>
-                                        <span class="lang-en">• 3-1. Research Topic &amp; Motivation</span>
+                                        <span class="lang-en">• 3-1. Research Topic &amp; Selection Rationale</span>
                                     </div>
                                     <p style="font-size: 14.1px; color: #334155; line-height: 1.75; text-align: justify; margin-bottom: 10px;"
                                         class="lang-ko">
@@ -9598,7 +9801,7 @@
                                                         class="lang-en">Longitudinal network modeling &amp;
                                                         simulation</span>
                                                 </td>
-                                                <td><span class="lang-ko">플랫폼 로그 기반 BREM 사건 분석</span><span
+                                                <td><span class="lang-ko">플랫폼 로그 기반 bipartite REM 사건 분석</span><span
                                                         class="lang-en">Relational event analysis of platform
                                                         logs</span></td>
                                                 <td><span class="lang-ko">개념적·이론적 분류체계 검토</span><span
@@ -9611,8 +9814,8 @@
                                                             of Analysis</span></strong></td>
                                                 <td><span class="lang-ko">학생 및 또래 교우 관계망</span><span
                                                         class="lang-en">Students and peer friendship ties</span></td>
-                                                <td><span class="lang-ko">노동자 및 메시지 스레드 (이분망)</span><span
-                                                        class="lang-en">Workers and message threads (Bipartite)</span>
+                                                <td><span class="lang-ko">노동자 간 스레드 참여</span><span
+                                                        class="lang-en">worker-thread engagement</span>
                                                 </td>
                                                 <td><span class="lang-ko">정치 인플루언서 및 소통 속성</span><span
                                                         class="lang-en">Political influencers and communicative
@@ -9668,12 +9871,12 @@
                             <div
                                 style="background-color: #f1f5f9; border-left: 5px solid #265CD1; border-radius: 8px; padding: 25px 30px; margin-top: 30px;">
                                 <h5 style="font-size: 18px; font-weight: 800; color: #0f172a; margin-bottom: 12px;">
-                                    <span class="lang-ko">이번 리딩그룹의 핵심 정리 (Key Takeaways)</span>
-                                    <span class="lang-en">Key Takeaways from Reading Group 2</span>
+                                    <span class="lang-ko">핵심 정리</span>
+                                    <span class="lang-en">Key Takeaways</span>
                                 </h5>
                                 <p style="font-size: 14.1px; color: #334155; line-height: 1.8; text-align: justify; margin-bottom: 10px;"
                                     class="lang-ko">
-                                    이번 2차 리딩그룹에서 검토한 세 연구는 각기 다른 분석 방법론과 이론적 틀을 취하고 있으나, 본질적으로 <strong>"온라인 환경에서
+                                    이번 리딩그룹에서 검토한 세 연구는 각기 다른 분석 방법론과 이론적 틀을 취하고 있으나, 본질적으로 <strong>"온라인 환경에서
                                         행위자(actors), 참여(participation), 그리고 영향력(influence)을 어떻게 엄밀하게 측정하고 설명할
                                         것인가"</strong>라는 공통된 문제의식으로 수렴됩니다.
                                 </p>
@@ -9688,8 +9891,8 @@
                                     class="lang-ko">
                                     <li><strong>네트워크 역학의 생성적 시뮬레이션:</strong> SAOM을 단순한 회귀 추정치를 산출하는 도구에 한정하지 않고 가상 개입
                                         시뮬레이션의 생성 모형으로 확장함으로써, 중심성 기반 타깃팅과 네트워크 승수 효과의 위력을 입증함.</li>
-                                    <li><strong>주의 역학을 통한 상호작용 규명:</strong> 조직 내 대규모 소셜 플랫폼 로그를 이분 관계 사건 모형(BREM)으로 분석하여
-                                        주의 강화(+41%), 주의 군집화(+21%), 주의 집중(+69%)이 참여를 견인하는 메커니즘을 규명하고, 개념의 조작화가 결과 해석에 미치는
+                                    <li><strong>주의 역학을 통한 상호작용 규명:</strong> 조직 내 대규모 소셜 플랫폼 로그를 이분 관계 사건 모형(bipartite REM)으로 분석하여
+                                        주의 강화, 주의 군집화, 주의 집중이 참여를 견인하는 메커니즘을 규명하고, 개념의 조작화가 결과 해석에 미치는
                                         결정적 영향을 도출함.</li>
                                     <li><strong>영향력 행위자의 다차원적 지평:</strong> 단순 팔로워 수나 활동량을 넘어 소통 방식, 보상, 청중, 정치성, 공식 역할,
                                         통제라는 6가지 속성의 스펙트럼을 제공하여 향후 온라인 커뮤니티 내 여론 주도자 연구를 다각화할 수 있는 이론적 기반을 마련함.</li>
@@ -9701,7 +9904,7 @@
                                         demonstrating the superiority of centrality-based targeting and the network
                                         multiplier effect.</li>
                                     <li><strong>Attention Mechanics of Participation:</strong> Utilizes bipartite
-                                        relational event models (BREM) on platform digital traces to reveal how
+                                        relational event models (bipartite REM) on platform digital traces to reveal how
                                         reinforcing (+41%), clustering (+21%), and focusing (+69%) structure
                                         participation, emphasizing the primacy of sound operationalization.</li>
                                     <li><strong>Multidimensional Influence Profiling:</strong> Replaces simplistic
@@ -9717,72 +9920,21 @@
             </div>
         </div>
 
-        <!-- 5-1. COMMUNITY - RESEARCH TREND 탭 -->
-        <div id="community-researchtrend" class="tab-content">
-            <div class="container">
-                <div id="community-researchtrend-main" style="display: block;">
-                    <div class="page-banner"><img src="images/banner.png" alt="COMMUNITY - RESEARCH TREND">
-                        <div class="page-banner-overlay">
-                            <div class="banner-line"></div>
-                            <div class="banner-category">COMMUNITY</div>
-                            <h1 class="banner-title">RESEARCH TREND</h1>
-                        </div>
-                    </div>
-
-                    <div class="research-trend-header">
-                        <div class="research-trend-filter-wrapper" id="rt-filter-wrapper">
-                            <button class="research-trend-filter-btn" id="rt-filter-btn" type="button"
-                                onclick="toggleResearchTrendFilterMenu(event)">
-                                <svg width="18" height="14" viewBox="0 0 18 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;">
-                                    <line y1="1.5" x2="18" y2="1.5" stroke="currentColor" stroke-width="2.5" />
-                                    <line x1="2.5" y1="7" x2="15.5" y2="7" stroke="currentColor" stroke-width="2.5" />
-                                    <line x1="5.5" y1="12.5" x2="12.5" y2="12.5" stroke="currentColor"
-                                        stroke-width="2.5" />
-                                </svg>
-                                <span id="rt-filter-label">Filter</span>
-                            </button>
-                            <div class="research-trend-filter-dropdown" id="rt-filter-dropdown">
-                                <div class="rt-filter-option" onclick="filterResearchTrend('Total')">Total</div>
-                                <div class="rt-filter-option"
-                                    onclick="filterResearchTrend('QAP (Quadratic Assignment Procedure)')">QAP (Quadratic
-                                    Assignment Procedure)</div>
-                                <div class="rt-filter-option"
-                                    onclick="filterResearchTrend('SAOM (Stochastic Actor-Oriented Models)')">SAOM
-                                    (Stochastic Actor-Oriented Models)</div>
-                                <div class="rt-filter-option" onclick="filterResearchTrend('Other')">Other</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="research-trend-grid" id="rt-cards-grid">
-                        <!-- Rendered by JS -->
+        <div id="community-researchtrend-detail" style="display: none;">
+            <button class="back-btn" onclick="hideContentDetail('researchtrend')">← Back to Seminars</button>
+            <div class="card" style="padding: 40px 45px;">
+                <div class="content-detail-header">
+                    <div id="rt-detail-badge" class="rt-detail-badge">SAOM (Stochastic Actor-Oriented Models)</div>
+                    <h3 id="rt-detail-title"
+                        style="font-size: 28px; color: #0f172a; font-weight: 800; margin-bottom: 20px; line-height: 1.4;">
+                        파편화 시대의 개인화된 뉴스 큐레이션과 공유 이슈 형성: 이슈 관여도에 따른 동적 네트워크 분석
+                    </h3>
+                    <div id="rt-detail-subtitle-box"
+                        style="display: flex; flex-direction: column; gap: 12px; background-color: #f8fafc; padding: 22px 25px; border-radius: 10px; border-left: 4px solid #265CD1;">
                     </div>
                 </div>
-
-                <div id="community-researchtrend-detail" style="display: none;">
-                    <button class="back-btn" onclick="hideContentDetail('researchtrend')">← Back to Research
-                        Trend</button>
-                    <div class="card" style="padding: 40px 45px;">
-                        <div class="content-detail-header">
-                            <div id="rt-detail-badge" class="rt-detail-badge">SAOM (Stochastic Actor-Oriented Models)
-                            </div>
-                            <h3 id="rt-detail-title"
-                                style="font-size: 28px; color: #0f172a; font-weight: 800; margin-bottom: 20px; line-height: 1.4;">
-                                파편화 시대의 개인화된 뉴스 큐레이션과 공유 이슈 형성: 이슈 관여도에 따른 동적 네트워크 분석
-                            </h3>
-
-                            <div id="rt-detail-subtitle-box"
-                                style="display: flex; flex-direction: column; gap: 12px; background-color: #f8fafc; padding: 22px 25px; border-radius: 10px; border-left: 4px solid #265CD1;">
-                            </div>
-                        </div>
-
-                        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 35px 0 30px 0;">
-
-                        <div id="rt-detail-body" class="seminar-discussion-section">
-                        </div>
-                    </div>
-                </div>
+                <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 35px 0 30px 0;">
+                <div id="rt-detail-body" class="seminar-discussion-section"></div>
             </div>
         </div>
 
@@ -10479,14 +10631,14 @@
             {
                 detailIdx: 2,
                 category: 'Reading Group',
-                title_ko: 'Reading Group 2차',
-                title_en: 'Reading Group 2'
+                title_ko: 'Reading Group: 네트워크 행위자의 참여와 영향력',
+                title_en: 'Reading Group: Participation and Influence of Network Actors'
             },
             {
                 detailIdx: 0,
                 category: 'Reading Group',
-                title_ko: 'Reading Group 1차',
-                title_en: 'Reading Group 1'
+                title_ko: 'Reading Group: 온라인 상호작용의 구조와 행위자',
+                title_en: 'Reading Group: The Structure of Online Interactions and Actors'
             },
             {
                 detailIdx: 1,
@@ -10599,44 +10751,6 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
         ];
 
         const eventDataList = [
-            {
-                title_ko: '디지털 큐레이션 랩, 제1차 리딩그룹 진행',
-                title_en: 'Digital Curation Lab Conducts Its First Reading Group Session',
-                body_ko: '지난 10월 7일, 디지털 큐레이션 랩 연구원들이 모여 제1차 리딩그룹을 진행하였다. 이번 리딩그룹은 향후 정기적으로 운영될 리딩그룹의 파일럿 세션으로, 연구원들이 각자 선정한 논문을 소개하고 주요 내용을 공유하며, 논문을 통해 얻은 인사이트와 연구적 시사점에 대해 논의하는 방식으로 진행되었다. ',
-                body_en: 'On October 7, researchers from the Digital Curation Lab held the First Reading Group Session, a pilot session for a regular reading group to be organized by the lab. During the session, each researcher introduced a paper of their choice, presenting its key findings and sharing insights and research implications drawn from the paper. ',
-                img: 'images/events_3_1.png',
-                images: [
-                    'images/events_3_1.png',
-                    'images/events_3_2.png'
-                ],
-                body_html_ko: `<div style="line-height: 1.85; word-break: keep-all; overflow-wrap: break-word; color: #334155; font-size: 15.5px; max-width: 850px; margin: 0 auto;">
-    <div style="margin: 25px 0; text-align: center;">
-        <img src="images/events_3_1.png" alt="Reading Group Event 1" style="width: 100%; max-width: 850px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: inline-block;">
-    </div>
-
-    <p style="margin-bottom: 20px;">지난 10월 7일, 디지털 큐레이션 랩 연구원들이 모여 제1차 리딩그룹을 진행하였다. 이번 리딩그룹은 향후 정기적으로 운영될 리딩그룹의 파일럿 세션으로, 연구원들이 각자 선정한 논문을 소개하고 주요 내용을 공유하며, 논문을 통해 얻은 인사이트와 연구적 시사점에 대해 논의하는 방식으로 진행되었다. 이를 통해 연구원들은 다양한 연구 주제와 관점을 접하고, 서로의 연구에 대한 의견을 교환하며 각자의 연구 관심과 관점을 확장하였다. 앞으로 리딩그룹은 디지털 큐레이션 랩에서 2주에 한 번씩 정기적으로 진행될 예정이다. 각 리딩그룹의 주요 내용은 홈페이지의 COMMUNITY 메뉴 내 SEMINARS 탭을 통해 지속적으로 공유할 예정이다.</p>
-
-    <div style="margin: 25px 0; text-align: center;">
-        <img src="images/events_3_2.png" alt="Reading Group Event 2" style="width: 100%; max-width: 850px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: inline-block;">
-    </div>
-
-    <p style="margin-bottom: 20px;">제1차 리딩그룹 이후에는 참여 연구원들이 함께 점심 식사를 하며 교류하는 시간을 가졌다. 연구 관련 주제뿐만 아니라 연구원으로서의 경험과 개인적인 관심사 등 다양한 주제에 대해 의견을 나누었다. 이러한 교류는 공식적인 학술 논의를 넘어 연구원 간 상호 이해를 높이고, 연구실 구성원 간의 유대와 협력적 관계를 형성하는 계기가 되었다.</p>
-
-</div>`,
-                body_html_en: `<div style="line-height: 1.85; word-break: keep-all; overflow-wrap: break-word; color: #334155; font-size: 15.5px; max-width: 850px; margin: 0 auto;">
-    <div style="margin: 25px 0; text-align: center;">
-        <img src="images/events_3_1.png" alt="Reading Group Event 1" style="width: 100%; max-width: 850px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: inline-block;">
-    </div>
-
-    <p style="margin-bottom: 20px;">On October 7, researchers from the Digital Curation Lab held the First Reading Group Session, a pilot session for a regular reading group to be organized by the lab. During the session, each researcher introduced a paper of their choice, presenting its key findings and sharing insights and research implications drawn from the paper. The discussion enabled researchers to engage with diverse research topics and perspectives, exchange feedback on one another’s work, and broaden their own research interests and perspectives. The reading group is scheduled to meet every two weeks at the Digital Curation Lab. Summaries of each session will be regularly published under the SEMINARS tab in the COMMUNITY section of the lab’s website.</p>
-
-    <div style="margin: 25px 0; text-align: center;">
-        <img src="images/events_3_2.png" alt="Reading Group Event 2" style="width: 100%; max-width: 850px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); display: inline-block;">
-    </div>
-
-    <p style="margin-bottom: 20px;">Following the first session, the participating researchers gathered for lunch, extending their exchanges beyond the formal reading group. In addition to research-related topics, they discussed their experiences as researchers and a range of personal interests. These informal exchanges complemented the academic discussions by fostering mutual understanding and strengthening collegial relationships among lab members, contributing to a collaborative research environment.</p>
-</div>`
-            },
             {
                 title_ko: '「AI와 큐레이션」 수업 Yash Raj Shrestha 교수 초청 특강 및 교류',
                 title_en: 'Guest Lecture and Academic Exchange with Professor Yash Raj Shrestha for the 「AI and Curation」Course',
@@ -10799,8 +10913,8 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
         // ─── SW & DATA 상세 정보 데이터 및 제어 ───
         const swDataList = [
             {
-                title_ko: '네트워크 통합 분석기 (베타)',
-                title_en: 'Network Integrated Analyzer (Beta)',
+                title_ko: '네트워크 통합 분석기 0.0.12',
+                title_en: 'Network Integrated Analyzer 0.0.12',
                 body_html_ko: `별도의 코딩 없이 네트워크 분석에 필요한 중심성, 계산기, 하위집단 분석, CONCOR 분석, QAP 분석을 시행할 수 있는 분석기입니다. R과 Python 기반의 분석 도구입니다.
 
 <div style="margin-top: 20px; background: #f8fafc; padding: 22px 25px; border-radius: 8px; border: 1px solid #e2e8f0;">
@@ -11227,8 +11341,9 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
             {
                 category_short: 'SAOM',
                 category_full: 'SAOM (Stochastic Actor-Oriented Models)',
+                category_group: 'Research Trend',
                 title_ko: "파편화 시대의 개인화된 뉴스 큐레이션과 공유 이슈 형성: 이슈 관여도에 따른 동적 네트워크 분석",
-                title_en: "Dynamic Modeling of Personalized News Curation and Shared Issue Networks: A Comparative Study by Issue Involvement",
+                title_en: "Dynamic Modeling of Personalized News Curation and Shared Issue Networks",
                 summary_ko: "파편화 시대의 개인화된 뉴스 큐레이션 환경 속에서 개별 수용자들이 어떻게 공통의 이슈를 공유하게 되는지, 정치 이슈 관여도(저관여 vs 고관여)에 따른 미시 메커니즘을 다층 확률적 행위자 지향 모형(SAOM)을 통해 실증 규명한 연구입니다.",
                 summary_en: "A dynamic network study investigating how personalized news curation relates to dyadic shared-issue concerns across levels of political issue involvement during the 2022 South Korean Presidential Election using a multi-level Stochastic Actor-Oriented Model (SAOM).",
                 date: '2026',
@@ -11239,7 +11354,7 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
                         <div><strong style="color: #0f172a;">저자 :</strong> 최수진 (Sujin Choi, 경희대학교 미디어학과)</div>
                         <div><strong style="color: #0f172a;">게재지 :</strong> <em>Information, Communication & Society</em> (2026, Vol. 29, No. 3, pp. 999&ndash;1022)</div>
                         <div><strong style="color: #0f172a;">DOI :</strong> <a href="https://doi.org/10.1080/1369118X.2025.2539295" target="_blank" style="color: #265CD1; text-decoration: underline;">10.1080/1369118X.2025.2539295</a></div>
-                        <div><strong style="color: #0f172a;">Keyword :</strong> <span style="color: #265CD1; font-weight: bold;"> #News curation  #manual filtering  #political homophily #issue involvement #inferential network analysis </span> </div>
+                        <div><strong style="color: #0f172a;">Keyword :</strong> <span style="color: #265CD1; font-weight: bold;"> #SAOM #Co-evolution #News Curation </span> </div>
                     </div>
 `,
                 subtitle_box_html_en: `
@@ -11248,7 +11363,7 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
                         <div><strong style="color: #0f172a;">Author :</strong> Sujin Choi (Department of Media, Kyung Hee University, Seoul, South Korea)</div>
                         <div><strong style="color: #0f172a;">Journal :</strong> <em>Information, Communication & Society</em> (2026, Vol. 29, No. 3, pp. 999&ndash;1022)</div>
                         <div><strong style="color: #0f172a;">DOI :</strong> <a href="https://doi.org/10.1080/1369118X.2025.2539295" target="_blank" style="color: #265CD1; text-decoration: underline;">10.1080/1369118X.2025.2539295</a></div>
-                        <div><strong style="color: #0f172a;">Keyword :</strong> <span style="color: #265CD1; font-weight: bold;"> #News curation  #manual filtering  #political homophily #issue involvement #inferential network analysis </span></div>
+                        <div><strong style="color: #0f172a;">Keyword :</strong> <span style="color: #265CD1; font-weight: bold;"> #SAOM #Co-evolution #News Curation </span></div>
                     </div>
 `,
                 body_html_ko: `
@@ -11987,15 +12102,39 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
             }
         ];
 
+        function applyMergedSeminarFilter(categoryFilter) {
+            const cards = document.querySelectorAll('#community-seminars .story-card, #community-seminars .rt-card');
+            const researchGrid = document.getElementById('rt-cards-grid');
+
+            cards.forEach((card) => {
+                const category = card.dataset.seminarCategory || card.querySelector('.seminar-category')?.textContent?.trim() || 'Other';
+                const shouldShow = categoryFilter === 'Total' || category === categoryFilter;
+                card.style.display = shouldShow ? '' : 'none';
+            });
+
+            if (researchGrid) {
+                const shouldShowResearchGrid = categoryFilter === 'Total' || categoryFilter === 'Research Trend';
+                researchGrid.style.display = shouldShowResearchGrid ? '' : 'none';
+            }
+        }
+
         function renderResearchTrendCards() {
             const grid = document.getElementById('rt-cards-grid');
             if (!grid) return;
 
             let filteredList = researchTrendDataList;
             if (activeRtFilter && activeRtFilter !== 'Total' && activeRtFilter !== 'All') {
-                filteredList = researchTrendDataList.filter(item =>
-                    item.category_full === activeRtFilter || item.category_short === activeRtFilter
-                );
+                filteredList = researchTrendDataList.filter(item => {
+                    const categoryValues = [
+                        item.category_full,
+                        item.category_short,
+                        item.category_group,
+                        item.type,
+                        item.category,
+                        item.section
+                    ].filter(Boolean);
+                    return categoryValues.some(value => value === activeRtFilter);
+                });
             }
 
             let html = '';
@@ -12004,18 +12143,26 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
                 const isEn = (currentLang === 'en');
                 const title = isEn ? (item.title_en || item.title_ko) : item.title_ko;
                 const summary = isEn ? (item.summary_en || item.summary_ko) : item.summary_ko;
-                const imgHtml = item.img ? `<div class="rt-img-placeholder"><img src="${item.img}" alt="${title}" style="width:100%; height:100%; object-fit:cover;"></div>` : `<div class="rt-img-placeholder"></div>`;
+                const keywordTags = ['SAOM', 'Co-evolution', 'News Curation'];
+                const categoryName = item.category_group || item.category_short || 'Research Trend';
                 html += `
-                    <div class="rt-card" onclick="showResearchTrendDetail(${origIdx})">
-                        <div class="rt-badge">${item.category_short}</div>
-                        ${imgHtml}
-                        <h3 class="rt-title">${title}</h3>
-                        <p class="rt-summary">${summary}</p>
-                        <div class="rt-date">${item.date}</div>
+                    <div class="card story-card rt-card" data-seminar-category="${categoryName}" onclick="showResearchTrendDetail(${origIdx})" style="cursor: pointer;">
+                        <div>
+                            <div class="seminar-category">${categoryName}</div>
+                            <h3 class="seminar-title ${isEn ? 'lang-en' : 'lang-ko'}">${title}</h3>
+                            <p class="seminar-desc ${isEn ? 'lang-en' : 'lang-ko'}">${summary}</p>
+                            <div class="keyword-container" style="margin-bottom: 12px;">
+                                <div class="tag-list">
+                                    ${keywordTags.map(tag => `<span class="tag-item">${tag}</span>`).join('')}
+                                </div>
+                            </div>
+                        </div>
                     </div>`;
             });
 
+            grid.classList.toggle('single-item', filteredList.length === 1);
             grid.innerHTML = html;
+            applyMergedSeminarFilter(activeRtFilter);
         }
 
         function toggleResearchTrendFilterMenu(e) {
@@ -12051,25 +12198,31 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
 
             if (wrapper) wrapper.classList.remove('is-open');
             renderResearchTrendCards();
+            applyMergedSeminarFilter(activeRtFilter);
         }
 
         function showResearchTrendDetail(idx, skipHistory = false) {
             activeResearchTrendIdx = idx;
             const data = researchTrendDataList[idx] || researchTrendDataList[0];
 
-            const mainView = document.getElementById('community-researchtrend-main');
-            const detailView = document.getElementById('community-researchtrend-detail');
+            const seminarsMain = document.getElementById('community-seminars-main');
+            const seminarsDetail = document.getElementById('community-seminars-detail');
+            const researchDetail = document.getElementById('community-researchtrend-detail');
 
-            if (mainView && detailView) {
-                mainView.style.display = 'none';
-                detailView.style.display = 'block';
-            }
+            if (seminarsMain) seminarsMain.style.display = 'none';
+            if (seminarsDetail) seminarsDetail.style.display = 'block';
+
+            document.querySelectorAll('.seminar-detail-content').forEach(el => {
+                el.style.display = 'none';
+            });
+
+            if (researchDetail) researchDetail.style.display = 'block';
 
             renderResearchTrendDetailData(data);
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
             if (!skipHistory) {
-                updateRoute('community-researchtrend/' + idx);
+                updateRoute('community-seminars');
             }
         }
 
@@ -12358,15 +12511,24 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
                 filterResearchTrend('Total');
             }
 
-            const mainView = document.getElementById(`community-${type}-main`);
-            const detailView = document.getElementById(`community-${type}-detail`);
+            const researchDetail = document.getElementById('community-researchtrend-detail');
+            if (researchDetail) researchDetail.style.display = 'none';
+
+            let mainView = document.getElementById(`community-${type}-main`);
+            let detailView = document.getElementById(`community-${type}-detail`);
+
+            if (type === 'researchtrend') {
+                mainView = document.getElementById('community-seminars-main');
+                detailView = document.getElementById('community-seminars-detail');
+            }
+
             if (mainView && detailView) {
                 mainView.style.display = 'block';
                 detailView.style.display = 'none';
             }
 
             if (!skipHistory) {
-                updateRoute(`community-${type}`);
+                updateRoute(type === 'researchtrend' ? 'community-seminars' : `community-${type}`);
             }
         }
 
@@ -12406,9 +12568,6 @@ Link to related article : https://give.khu.ac.kr/bbs/board.php?bo_table=Photos_0
             } else if (mainRoute === 'tech-data' && subParam !== undefined) {
                 openTab(null, 'tech-data', true);
                 showDataDetail(parseInt(subParam), true);
-            } else if (mainRoute === 'community-researchtrend' && subParam !== undefined) {
-                openTab(null, 'community-researchtrend', true);
-                showResearchTrendDetail(parseInt(subParam), true);
             } else if (mainRoute === 'community-seminars' && subParam !== undefined) {
                 openTab(null, 'community-seminars', true);
                 showSeminarDetail(parseInt(subParam), true);
